@@ -596,6 +596,18 @@ body {
 #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap .type_t {
   width: 70%;
 }
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap .type_t.hypen {
+  position: relative;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap .type_t.hypen::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  width: 6px;
+  height: 1px;
+  background-color: #333;
+}
 #wrapper #container .cotents_wrap .cotent_body .info_check {
   display: flex;
   padding: 4px 10px;
