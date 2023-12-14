@@ -678,5 +678,57 @@ var ui = {
 --------------------------------------------------------------*/
 $(document).ready(function(){
 	dv.init();   // 유틸리티 - pub_utility.js
+
 	
+	// $(".form_wrap").click(function(){
+	// 	if($(".form_wrap").hasClass("is-focused")){
+	// 		$(".form_wrap").removeClass("is-focused");
+	// 	} else{
+	// 		$(".form_wrap").addClass("is-focused");
+	// 	}
+	// });
+
+	/* input 텍스트 clear */
+	$('.form_wrap').each(function(){
+		$(this).find('.form-input').on('keyup focus', function(){
+			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+		
+			if($(this).val().length == 0){
+				$(this).siblings('.btn_clear').attr('style', 'visibility: hidden');
+			} else {
+				$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+			}
+		});
+	
+		$(this).find('.form-input').on('blur', function(){
+			$(this).siblings('.btn_clear').attr('style', 'visibility: hidden');
+		});
+	
+		$(this).find('.btn_clear').on('click touchstart', function(){
+			$(this).closest('.form_wrap').find('.form-input').val('');
+			$(this).closest('.form_wrap').find('.btn_clear').attr('style', 'visibility: hidden');
+			return false;
+		});
+	});
+	
+	$("#datenumber").keyup(function() {
+		var replace_text = $(this).val().replace(/[^-0-9]/g, '');
+		$(this).val(replace_text);
+	});
+
+
+
 });
+
+// 날짜를 yyyy.mm.dd 형식으로 만들어 줌.
+function date_mask(objValue) {
+	var v = objValue.replace("..", ".");
+
+		if (v.match(/^\d{4}$/) !== null) {
+			v = v + '.';
+		} else if (v.match(/^\d{4}\.\d{2}$/) !== null) {
+			v = v + '.';
+		}
+
+	return v;
+}

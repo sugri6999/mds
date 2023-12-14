@@ -121,7 +121,7 @@ body {
   line-height: 20px;
 }
 #wrapper #container .cotents_wrap .cotent_body .card.card_shadow {
-  padding: 0;
+  padding: 0 0 8px;
   border-radius: 10px;
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
@@ -563,7 +563,8 @@ body {
 #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap {
   position: relative;
 }
-#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .btn_select {
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .btn_select,
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .btn_clear {
   position: absolute;
   right: -10px;
   top: 0;
@@ -578,6 +579,23 @@ body {
 #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .arw-close::before, #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .arw-close::after {
   height: 15px;
 }
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap {
+  display: flex;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap .num_select {
+  position: relative;
+  width: 30%;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap .num_select .btn_select {
+  width: 25px;
+  right: 10px;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap .num_select .text_label {
+  display: block;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap .type_t {
+  width: 70%;
+}
 #wrapper #container .cotents_wrap .cotent_body .info_check {
   display: flex;
   padding: 4px 10px;
@@ -589,6 +607,41 @@ body {
   background: var(--gray-scale-gray-01-fdfdfd, #FDFDFD);
   font: 500 14px/20px "HGL";
   color: #F18D00;
+}
+#wrapper #container .cotents_wrap .cotent_body .cert_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+#wrapper #container .cotents_wrap .cotent_body .cert_wrap .app_logo {
+  width: 68px;
+}
+#wrapper #container .cotents_wrap .cotent_body .cert_wrap .info_txt {
+  margin-top: 16px;
+  text-align: center;
+  font: 400 18px/28px "HMR";
+}
+#wrapper #container .cotents_wrap .cotent_body .cert_wrap .info_step {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 24px;
+  margin-top: 40px;
+}
+#wrapper #container .cotents_wrap .cotent_body .cert_wrap .info_step li {
+  font: 400 16px/24px "HMR";
+}
+#wrapper #container .cotents_wrap .cotent_body .cert_wrap .info_step li span {
+  font: 400 16px/24px "HMR";
+}
+#wrapper #container .cotents_wrap .cotent_body .cert_wrap .info_step li em {
+  display: inline-block;
+  width: 21px;
+  border-radius: 4px;
+  background: #F1EBE6;
+  text-align: center;
+  font: 600 14px/21px "HGM";
 }
 #wrapper #container .cotents_wrap .cotent_foot .info_btn {
   display: flex;
@@ -841,15 +894,17 @@ body {
   top: 7px;
   right: -7px;
 }
+.accordion-basic5.card_bgwrap .card_shadow dl .accordion-title {
+  background: var(--hi-black-white-white, #FFF);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 .accordion-basic5 .card_shadow + .card_shadow,
 .accordion-basic5 .card_basic + .card_basic {
   margin-top: 12px;
 }
 .accordion-basic5 dl .accordion-title {
   padding: 16px 20px;
-  background: var(--hi-black-white-white, #FFF);
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
 }
 .accordion-basic5 dl .accordion-title .accordion-label {
   font: 400 16px "HMR";
@@ -987,6 +1042,7 @@ body {
 }
 .accordion-basic5 dl .accordion-content .desc01 {
   padding: 2px 20px 16px;
+  background: rgba(255, 255, 255, 0.7);
   font: 400 14px/20px "HGM";
   color: #555;
 }
@@ -1114,6 +1170,22 @@ body {
 .popup-wrap[data-popup=select] .popup-basic .popup-body .card.card_info.card_info02 {
   background: var(--background-bg-01, #F9F7F4);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
+}
+.popup-wrap[data-popup=select] .popup-basic .popup-body .card.card_info.card_info02 .form-check label {
+  font: 400 16px/24px "HMR";
+}
+.popup-wrap[data-popup=select] .popup-basic .popup-body .card.card_default.card_info02 {
+  margin: 16px 0 10px;
+}
+.popup-wrap[data-popup=select] .popup-basic .popup-body .card.card_default.card_info02 h4 {
+  font: 400 16px/24px "HMR";
+}
+.popup-wrap[data-popup=select] .popup-basic .popup-body .card.card_default.card_info02 .form-check {
+  margin: 4px 0;
+}
+.popup-wrap[data-popup=select] .popup-basic .popup-body .card.card_default.card_info02 .form-check label {
+  font: 500 14px/20px "HGM";
+  color: #555;
 }
 .popup-wrap[data-popup=fullcontent] .popup-basic {
   max-width: 100%;
@@ -1412,7 +1484,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 40px 0 10px;
+  margin: 24px 0 10px;
 }
 .popup-wrap .popup-basic .popup-body .step_num span {
   padding: 10px 68px;
@@ -1442,7 +1514,7 @@ body {
 .popup-wrap .popup-basic .popup-body .canvas_wrap {
   margin-top: 16px;
   width: 100%;
-  height: 513px;
+  height: calc(100vh - 230px);
   flex-shrink: 0;
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.7);
