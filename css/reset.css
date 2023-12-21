@@ -173,3 +173,4 @@ table {width:100%; border-spacing:0; border-collapse:collapse}
 caption {visibility:hidden; height:0; line-height:0; font-size:0}
 legend {position:absolute; left:-9999em; top:-9999em}
 input:focus {outline:0}
+textarea {background:transparent}

@@ -16,23 +16,19 @@
 <script src="../js/ui.js"></script>
 </head>
 <body>
+
     <!-- Modal Basic-->
-    <div id="popupFull" class="popup-wrap is-active" data-popup="fullcontent" role="dialog" aria-labelledby="popupSelectTitle">
-        <div class="popup popup-basic popup-default">
+    <div id="popupContent" class="popup-wrap is-active" data-popup="content" role="dialog" aria-labelledby="popupSelectTitle">
+        <div class="popup popup-basic">
 			<div class="popup-inner">
-				<div class="popup-head">
-					<h3 id="popupSelectTitle" class="popup-title popup-focus">개인(신용)정보의 수집·이용에 관한 사항</h3>                    
-			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기" onclick="ui.popup.close('popupFull')"><span><i class="arw arw-close">Close</i></span></button>
+				<div class="popup-head">                   
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('popupContent')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
 				</div>
 				<div class="popup-body">
-					<div class="canvas_wrap"></div>
-
-					<div class="step_num">
-						<span class="label style-5">1/1</span>
-					</div>
+					<h4>시간이 초과되었습니다. <br>처음부터 다시 진행해주세요.</h4>
 				</div>
                 <div class="popup-foot">
-                    <button type="button" class="btn btn-type2 btn-primary btn-block"><span>확인</span></button>
+                    <button type="button" class="btn btn-type2 btn-primary" onclick="ui.popup.close('popupContent')"><span>확인</span></button>
                 </div>
 			</div>
 		</div>
@@ -40,4 +36,3 @@
     <!-- //Modal -->
 </body>
 </html>
-

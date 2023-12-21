@@ -112,6 +112,14 @@ textarea.form-text {height:auto; padding:10px}
 #no-button:checked + .button-label {border-radius:10px; background:#fff; border:1px solid #F18D00}
 #yes-button:checked + .button-label span,
 #no-button:checked + .button-label span {color:#F18D00}
+#man-button:checked + .button-label,
+#woman-button:checked + .button-label {border-radius:10px; background:#fff; border:1px solid #F18D00}
+#man-button:checked + .button-label span,
+#women-button:checked + .button-label span {color:#F18D00}
+#in-button:checked + .button-label,
+#out-button:checked + .button-label {border-radius:10px; background:#fff; border:1px solid #F18D00}
+#in-button:checked + .button-label span,
+#out-button:checked + .button-label span {color:#F18D00}
 
 
 /* Basic */

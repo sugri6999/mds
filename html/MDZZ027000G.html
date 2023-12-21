@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<title>현대해상</title>
+<link type="text/css" rel="stylesheet" href="../css/import.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/lib/jquery-3.3.1.min.js"></script>
+<script src="../js/lib/prefixfree.min.js"></script>
+<script src="../js/utility.js"></script>
+<script src="../js/device.js"></script>
+<script src="../js/ui.js"></script>
+</head>
+<body>
+
+    <!-- Modal Basic-->	
+    <div id="daySelect" class="popup-wrap is-active" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle">
+        <div class="popup popup-basic">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">일자를 선택해 주세요</h3>
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기" onclick="ui.popup.close('daySelect')"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+                    <div class="item_list">
+                        <ul>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio11" value="" checked />
+                                        <label for="sRadio11">5일</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio12" value="" />
+                                        <label for="sRadio12">15일</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio13" value="" />
+                                        <label for="sRadio13">20일</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio14" value="" />
+                                        <label for="sRadio14">25일</label>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </div><!-- 은행선택 -->
+    <!-- //Modal -->
+</body>
+</html>
+

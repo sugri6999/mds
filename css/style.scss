@@ -278,6 +278,24 @@ body {background:var(--background-bg-01, #F9F7F4);}
                             .btn_clear {position:absolute; right:-10px; top:0; width:40px; height:40px;}
                             .arw-toggle {width:16px; height:16px; background:url('../images/combo_down.svg') no-repeat  center center}
                             .arw-close::before, .arw-close::after {height:15px}
+
+                            &.un_line {
+                                .radio-wrap label:last-child {
+                                    position:relative;
+                                    &::before {content:''; position:absolute; left:-1px; top:12px; width:1px; height:14px; background-color:#dbdbdb; z-index:0}
+                                }
+                            }
+                            .insu_num {
+                                display:flex; align-items:center; justify-content:space-between;
+                                .fild_num {
+                                    width:calc(100% - 80px); position:relative;
+                                    em {position:absolute; top:10px; right:0; font:100 16px 'HML'}
+                                }
+                                .btn-type3 {
+                                    border:1px solid #003070; padding:6px 15px; border-radius:6px;
+                                    span {font:400 14px/24px 'HML'; color:#003070}
+                                }
+                            }
                         }
                         &.col2 {
                             .form_wrap {

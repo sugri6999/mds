@@ -20,7 +20,7 @@
 		<!-- HEADER -->
     	<header id="header">
 			<h1><img src="../images/g62.svg" class="ico_logo" alt="H" /></h1>
-			<h2>보험금 지급</h2>
+			<h2>자동이체등록</h2>
 			<p><img src="../images/ico_chat.svg" alt="" /></p>
 		</header>
         <!-- //HEADER -->
@@ -30,24 +30,33 @@
 			<div class="cotents_wrap">
 				<div class="cotent_heder">
 					<div class="step_box">
-						<p>보험금 지급을 위해 정보를 입력해주세요.</p>
+						<p>보험료 결제 정보를 입력해주세요.</p>
 						<ul>
 							<li><span class="pointer">1</span></li>
-							<li><span class="pointer is-active">2</span></li>
+							<li><span class="pointer">2</span></li>
 							<li><span class="pointer">3</span></li>
+							<li><span class="pointer">4</span></li>
+							<li><span class="pointer is-active">5</span></li>
+							<li><span class="pointer">6</span></li>
 						</ul>
 					</div><!-- //계약단계 Step 표시 -->
-					<p class="title_disc">보험금 지급을 위한 <br>은행을 선택해주세요.</p>
+					<p class="title_disc">자동이체 일자를 선택해주세요.</p>
+					<div class="info_wrap">
+						<div class="info_title">계약정보</div>
+						<div class="info_box">
+							<p>무배당 뉴하이카운전자 상해보험 <br>(Hi2309)1종 (운전자용)기본플랜</p>
+						</div>
+					</div>
 				</div>
 				<div class="cotent_body">
 					<div class="pay_wrap">
 						<div class="form_item">
 							<div class="form_label">
-								<label for="">예금주</label>
+								<label for="">자동이체일자</label>
 							</div>
 							<div class="form_wrap is-focused">
-								<input type="text" id="" name="" class="form-input" value="" placeholder="예금주를 입력해주세요." />
-								<button type="button" class="btn_select"><i class="arw arw-close txt_close"></i></button>
+								<input type="text" id="" name="" class="form-input" placeholder="일자를 선택해주세요" disabled />
+								<button type="button" class="btn_select" onclick="ui.popup.open('daySelect', this);"><i class="arw arw-toggle"></i></button>
 							</div>
 						</div>
 						<div class="form_item">
@@ -55,22 +64,31 @@
 								<label for="">계좌번호 입력</label>
 							</div>
 							<div class="form_wrap">
-								<input type="number" id="" name="" class="form-input" value="123456789" />
-								<button type="button" class="btn_clear"><i class="arw arw-close"></i></button>
+								<input type="number" id="" name="" class="form-input" value="123454678" placeholder="숫자만 입력해주세요." />
+								<button type="button" class="btn_select"><i class="arw arw-close txt_close"></i></button>
 							</div>
 						</div>
 						<div class="form_item">
 							<div class="form_label">
 								<label for="">은행선택</label>
 							</div>
-							<div class="form_wrap">
-								<input type="text" id="" name="" class="form-input" value="우리은행" placeholder="은행을 선택해주세요." />
+							<div class="form_wrap is-focused">
+								<input type="text" id="" name="" class="form-input" value="우리은행" placeholder="은행을 선택해주세요." disabled />
 								<button type="button" class="btn_select" onclick="ui.popup.open('bankSelect', this);"><i class="arw arw-toggle"></i></button>
 							</div>
 						</div>
-					</div>
-                    <div class="bul bul_info txt_info" style="margin-top:-18px;">
-						<p>계좌번호 입력 시, 보험금을 지급받는 계약의 수익자 계좌로 입력해주세요.</p>
+						<div class="form_item">
+							<div class="form_label">
+								<label for="">계약자</label>
+							</div>
+							<div class="form_wrap">
+								<input type="text" id="" name="" class="form-input" value="김*대" disabled />
+							</div>
+						</div>
+						
+						<div class="bul bul_info txt_info margin-t12">
+							<p>김*대(계약자)님의 계좌로만 이체가 가능해요.</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -80,11 +98,81 @@
         <!-- Footer -->
         <footer id="footer">
 			<button type="button" class="btn btn-type2 btn-block"><span>이전</span></button>
-			<button type="button" class="btn btn-type1 btn-block" disabled><span>다음</span></button>
+			<button type="button" class="btn btn-type1 btn-block" onclick="ui.popup.open('popupSelect', this);"><span>다음</span></button>
         </footer>
-        <!-- //Footer -->
 	</div>
+    <!-- //Footer -->
 
+    <!-- Modal Basic-->
+    <div id="popupSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
+        <div class="popup popup-basic">
+            <div class="popup-inner">
+                <div class="popup-head">
+                    <h3 id="popupSelectTitle" class="popup-title popup-focus">환급금수령계좌 등록</h3>                    
+                    <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('popupSelect')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+                </div>
+                <div class="popup-body">
+                    <p class="desc01 align-c">환급금수령계좌로 등록할까요? <br>(자동 수령가능한도 5억)</p>
+                </div>
+                <div class="popup-foot">
+                    <button type="button" class="btn btn-type2 btn-block" onclick="ui.popup.close('popupSelect')"><span>아니오</span></button>
+                    <button type="button" class="btn btn-type2 btn-primary btn-block"><span>네</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Modal -->
+
+    <!-- Modal Basic-->	
+    <div id="daySelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
+        <div class="popup popup-basic">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">일자를 선택해 주세요</h3>
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기" onclick="ui.popup.close('daySelect')"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+                    <div class="item_list">
+                        <ul>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio02" id="sRadio21" value="" checked />
+                                        <label for="sRadio21">5일</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio02" id="sRadio22" value="" />
+                                        <label for="sRadio22">15일</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio02" id="sRadio23" value="" />
+                                        <label for="sRadio23">20일</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio02" id="sRadio24" value="" />
+                                        <label for="sRadio24">25일</label>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </div>
+    <!-- //Modal -->
     <!-- Modal Basic-->
     <div id="bankSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
         <div class="popup popup-basic">

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<title>현대해상</title>
+<link type="text/css" rel="stylesheet" href="../css/import.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/lib/jquery-3.3.1.min.js"></script>
+<script src="../js/lib/prefixfree.min.js"></script>
+<script src="../js/utility.js"></script>
+<script src="../js/device.js"></script>
+<script src="../js/ui.js"></script>
+</head>
+<body> 
+
+    <!-- Modal Basic-->
+    <div id="popupSelect" class="popup-wrap is-active" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle">
+        <div class="popup popup-basic">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">청약서류 전달정보 입력</h3>                    
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('popupSelect')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+					<p class="title_disc">청약서류(청약서 및 약관 등) 전달을 위한 <br>연락처를 입력해 주세요.</p>
+                    <div class="form_item col2">
+                        <form>
+                            <div class="form_label">
+                                <label for="ipt_mail1">이메일</label>  <button type="button" onclick="reset()"><img src="../images/ico_reset.svg" alt=""></button>
+                            </div>
+                            <div class="form_wrap">
+                                <span class="type_t"><input type="text" id="ipt_mail1" name="" class="form-input" placeholder="hyundai" /></span>
+                                <span class="txt_at">@</span>
+                                <div class="mail_select">                                
+                                    <span class="text_label"><input type="text" id="ipt_mail2" name="" class="form-input" placeholder="gmail.com" /></span> 
+                                    <button type="button" class="" onclick="ui.popup.open('mailSelect', this);"> <i class="arw arw-toggle"></i></button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form_item align_r margin-t10 margin-b10">
+                        <span class="form-check txt_left">
+                            <input type="checkbox" name="" id="sCheck11" value="" checked />
+                            <label for="sCheck11">고객님의 E-Mail 정보를 입력한 내용으로 변경</label>
+                        </span>
+                    </div>
+				</div>
+                <div class="popup-foot">
+                    <button type="button" class="btn btn-type2 btn-primary btn-block"><span>서류전달정보 입력 완료</span></button>
+                </div>
+			</div>
+		</div>
+    </div>
+    <!-- //Modal -->
+    
+
+    <!-- Modal Basic-->
+    <div id="mailSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
+        <div class="popup popup-basic">
+            <div class="popup-inner">
+                <div class="popup-head">
+                    <h3 id="popupSelectTitle" class="popup-title popup-focus">도메인을 선택해 주세요</h3>
+                    <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('mailSelect')" title="제목 팝업닫기" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+                </div>
+                <div class="popup-body">
+                    <div class="item_list">
+                        <ul>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio11" value="" checked />
+                                        <label for="sRadio11">직접입력</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio12" value="" />
+                                        <label for="sRadio12">gmail.com</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio13" value="" />
+                                        <label for="sRadio13">naver.com</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio14" value="" />
+                                        <label for="sRadio14">hanmail.net</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio15" value="" />
+                                        <label for="sRadio15">daum.net</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio16" value="" />
+                                        <label for="sRadio16">nate.com</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio17" value="" />
+                                        <label for="sRadio17">hotmail.com</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio18" value="" />
+                                        <label for="sRadio18">lycos.com</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio19" value="" />
+                                        <label for="sRadio19">dreamwiz.com</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio20" value="" />
+                                        <label for="sRadio20">korea.com</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio21" value="" />
+                                        <label for="sRadio21">chol.com</label>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //Modal -->
+</body>
+</html>
+

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<title>현대해상</title>
+<link type="text/css" rel="stylesheet" href="../css/import.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/lib/jquery-3.3.1.min.js"></script>
+<script src="../js/lib/prefixfree.min.js"></script>
+<script src="../js/utility.js"></script>
+<script src="../js/device.js"></script>
+<script src="../js/ui.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="comm_wrap">
+		<!-- HEADER -->
+    	<header id="header">
+			<h1><img src="../images/g62.svg" class="ico_logo" alt="H" /></h1>
+			<h2>본인인증</h2>
+			<p><img src="../images/ico_chat.svg" alt="" /></p>
+		</header>
+        <!-- //HEADER -->
+
+		<!-- Container -->
+		<section id="container">
+			<div class="cotents_wrap">
+				<div class="cotent_body">
+                    <div class="cert_wrap">
+                        <p class="app_logo"><img src="../images/logo_kakao.svg" alt="" /></p>
+                        <p class="info_txt">카카오톡 앱으로 <br>아래와 같이 진행해 주세요.</p>
+                        <ul class="info_step">
+                            <li><em>1</em> <span class="font_orange">카카오</span> 앱에 접속해주세요.</li>
+                            <li><em>2</em> <span class="font_orange">카카오페이</span> 알림톡에서 인증해주세요.</li>
+                            <li><em>3</em> <span class="font_orange">현재화면</span> 으로 돌아와서 <span class="font_orange">[인증완료]</span> 선택!</li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+		</section>
+		<!-- //Container -->
+
+        <!-- Footer -->
+        <footer id="footer">
+			<button type="button" class="btn btn-type1 btn-block btn-primary" onclick="ui.popup.open('popupSelect', this);"><span>인증완료</span></button>
+        </footer>
+        <!-- //Footer -->
+	</div>
+
+    <!-- Modal Basic-->
+    <div id="popupSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
+        <div class="popup popup-basic">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">인증이 완료되지 않았어요.</h3>                    
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('popupSelect')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+					<p class="title_disc02 padding-t5"><span class="font_orange">카카오톡 앱</span>에서 인증을 진행해주세요.</p>
+					<p style="padding:10px 18px;"><img src="../images/kakaotalk.png" alt="" /></p>
+				</div>
+                <div class="popup-foot">
+                    <button type="button" class="btn btn-type2 btn-primary btn-block"><span>서명전송</span></button>
+                </div>
+			</div>
+		</div>
+    </div>
+    <!-- //Modal -->
+</body>
+</html>

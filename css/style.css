@@ -602,6 +602,43 @@ body {
 #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .arw-close::before, #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .arw-close::after {
   height: 15px;
 }
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap.un_line .radio-wrap label:last-child {
+  position: relative;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap.un_line .radio-wrap label:last-child::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  top: 12px;
+  width: 1px;
+  height: 14px;
+  background-color: #dbdbdb;
+  z-index: 0;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .insu_num {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .insu_num .fild_num {
+  width: calc(100% - 80px);
+  position: relative;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .insu_num .fild_num em {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  font: 100 16px "HML";
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .insu_num .btn-type3 {
+  border: 1px solid #003070;
+  padding: 6px 15px;
+  border-radius: 6px;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .insu_num .btn-type3 span {
+  font: 400 14px/24px "HML";
+  color: #003070;
+}
 #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap {
   display: flex;
 }
