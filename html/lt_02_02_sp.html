@@ -93,13 +93,13 @@
         <!-- Footer -->
         <footer id="footer">
 			<button type="button" class="btn btn-type2 btn-block"><span>이전</span></button>
-			<button type="button" class="btn btn-type1 btn-block"><span>다음</span></button>
+			<button type="button" class="btn btn-type1 btn-block" onclick="ui.popup.open('popupSelect', this);"><span>다음</span></button>
         </footer>
 	</div>
     <!-- //Footer -->
 
     <!-- Modal Basic-->
-    <div id="popupSelect" class="popup-wrap is-active" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle">
+    <div id="popupSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
         <div class="popup popup-basic">
 			<div class="popup-inner">
 				<div class="popup-head">
@@ -110,17 +110,13 @@
                     <p class="desc01 align-c">환급금수령계좌로 등록할까요? <br>(자동 수령가능한도 5억)</p>
 				</div>
                 <div class="popup-foot">
-                    <button type="button" class="btn btn-type2 btn-block"><span>아니오</span></button>
+                    <button type="button" class="btn btn-type2 btn-block" onclick="ui.popup.close('popupSelect')"><span>아니오</span></button>
                     <button type="button" class="btn btn-type2 btn-primary btn-block"><span>네</span></button>
                 </div>
 			</div>
 		</div>
     </div>
     <!-- //Modal -->
-
-    <!-- Dimmer -->
-    <div class="dimmer is-active" aria-hidden="true"></div>
-    <!-- //Dimmer -->
 </body>
 </html>
 

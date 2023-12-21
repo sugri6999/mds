@@ -28,12 +28,11 @@
 		<section id="container">
             <div class="cotents_wrap">
 				<div class="cotent_heder">
-                    <h2><span>김*대 고객</span>님 안녕하세요</h2>
-					<p class="title_disc">가입설계서 조회를 위해 <br>생년월일 8자리를 알려주세요.</p>
+					<p class="title_disc">안녕하세요 <br>안내문 조회를 위해 <br>생년월일 8자리를 알려주세요.</p>
 					<div class="info_wrap">
 						<div class="info_title">계약정보</div>
 						<div class="info_box">
-							<p>자동차보험 가입설계서</p>
+							<p>신실손전환가입 안내</p>
 						</div>
 					</div>
 				</div>
@@ -41,11 +40,13 @@
 					<div class="pay_wrap">
                         <div class="form_item">
                             <div class="form_label">
-                                <label for="">생년월일</label>
+                                <label for="dateControll">생년월일</label>
                             </div>
-                            <div class="form_wrap">
-                                <input type="number" id="" name="" class="form-input" placeholder="예. 19991111" />
-                                <button type="button" class="btn_select"><i class="arw arw-close"></i></button>
+                            <div class="form_wrap is-focused">
+                                <form>
+                                    <input type="text" id="dateControll" name="dateControll" class="form-input" onkeyup="this.value = date_mask(this.value)" maxlength="10" placeholder="예. 1999.11.11" />
+                                    <button type="reset" class="btn_clear"><i class="arw arw-close"></i></button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -55,29 +56,11 @@
 		<!-- //Container -->
 
         <!-- Footer -->
-        <footer id="footer">
-            <button type="button" class="btn btn-type1 btn-primary btn-block" onclick="ui.popup.open('popupContent', this);"><span>다음</span></button>
-        </footer>
+        <!-- <footer id="footer">
+            <button type="button" class="btn btn-type1 btn-primary btn-block"><span>다음</span></button>
+        </footer> -->
         <!-- //Footer -->
 	</div>
-
-    <!-- Modal Basic-->
-    <div id="popupContent" class="popup-wrap" data-popup="content" role="dialog" aria-labelledby="popupSelectTitle" hidden>
-        <div class="popup popup-basic">
-			<div class="popup-inner">
-				<div class="popup-head">                   
-			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('popupContent')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
-				</div>
-				<div class="popup-body">
-					<h4>생년월일을 확인해 주세요.</h4>
-				</div>
-                <div class="popup-foot">
-                    <button type="button" class="btn btn-type2 btn-primary" onclick="ui.popup.close('popupContent')"><span>확인</span></button>
-                </div>
-			</div>
-		</div>
-    </div>
-    <!-- //Modal -->
 </body>
 </html>
 

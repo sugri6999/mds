@@ -119,13 +119,13 @@
         <!-- Footer -->
         <footer id="footer">
 			<button type="button" class="btn btn-type2 btn-block"><span>이전</span></button>
-			<button type="button" class="btn btn-type1 btn-block"><span>다음</span></button>
+			<button type="button" class="btn btn-type1 btn-block" onclick="ui.popup.open('popupContent', this);"><span>다음</span></button>
         </footer>
 	</div>
     <!-- //Footer -->
 
     <!-- Modal Basic-->
-    <div id="popupContent" class="popup-wrap is-active" data-popup="content" role="dialog" aria-labelledby="popupSelectTitle">
+    <div id="popupContent" class="popup-wrap" data-popup="content" role="dialog" aria-labelledby="popupSelectTitle" hidden>
         <div class="popup popup-basic">
 			<div class="popup-inner">
 				<div class="popup-head">                   
@@ -143,10 +143,6 @@
 		</div>
     </div>
     <!-- //Modal -->
-
-    <!-- Dimmer -->
-    <div class="dimmer is-active" aria-hidden="true"></div>
-    <!-- //Dimmer -->
 </body>
 </html>
 

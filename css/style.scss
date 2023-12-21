@@ -55,7 +55,7 @@ body {background:var(--background-bg-01, #F9F7F4);}
                     &.card_shadow {
                         padding:0 0 8px; border-radius:10px; background-color:rgba(255, 255, 255, .7); -webkit-box-shadow:0 1px 4px 0 rgba(0, 0, 0, .08); box-shadow:0 1px 4px 0 rgba(0, 0, 0, .08);
                         .style-1 { 
-                            dt {
+                            > dt {
                                 display:flex; justify-content:space-between; align-items:center; position:relative; padding:12px 16px;
                                 &::after {content:''; position:absolute; top:0; left:-0; right:0; height:1px; background-color:#EDEDED}
                                 &:first-child::after {display:none}
@@ -69,6 +69,17 @@ body {background:var(--background-bg-01, #F9F7F4);}
                                 dt {
                                     div {
                                         span {display:block; margin-bottom:5px}
+                                    }
+                                }
+                            }
+                            &.dl_dtdd {
+                                > dd {
+                                    padding:16px 20px; border-top:1px solid #EDEDED; margin-top:5px;
+                                    h3 {text-align:center; font:400 16px/24px 'HMR'}
+                                    dl {
+                                        display:flex; justify-content:space-between; align-items:center; margin-top:16px;
+                                        dt {font:400 14px/20px 'HGM'; color:#555}
+                                        dd {font:500 14px/20px 'HGM'; color:#333}
                                     }
                                 }
                             }
@@ -315,20 +326,29 @@ body {background:var(--background-bg-01, #F9F7F4);}
                         li + li {margin-top:10px}
                     }
                 }
+
+                .susin_intro {
+                    display:flex; flex-direction:column; align-items:center; text-align:center; justify-content:center; margin-top:40px;
+                    .susin_intro_head {
+                        h2 {font:400 30px/42px 'HMR'; letter-spacing:.6px}
+                        p {
+                            font:400 16px/24px "HGL"; letter-spacing:.32px;
+                            span {font:500 16px/24px "HGM"}
+                        }
+                    }
+                    .susin_chrt {width:260px; position:relative; left:-22px; top:-10px}
+                }
+                .susin_txt_info {
+                    display:flex; flex-direction:column; align-items:flex-start; gap:16px;
+                    * {font:500 14px/20px 'HGM'; color:#555}
+                    ul {display:flex; flex-direction:column; align-items:flex-start; gap:6px}
+                }
             }
 
             .cotent_foot {
-                .info_btn {display: flex;position:absolute;
-                    bottom: 84px;
-                    left: 24px;
-                    right: 24px;
-                    width: 327px;
-                    padding: 12px 16px;
-                    justify-content: space-between;
-                    align-items: flex-start; border-radius: 10px;
-                    background: var(--gray-scale-gray-09333333, #333);}
-                    .info_btn * {color:#FFF; font:400 14px/20px 'HGL'}
-                    .info_btn span {color:#F18D00}
+                .info_btn {display:flex; position:absolute; bottom:84px; left:24px; right:24px; width:327px; padding:12px 16px; justify-content:space-between; align-items:flex-start; border-radius:10px; background:var(--gray-scale-gray-09333333, #333)}
+                .info_btn * {color:#FFF; font:400 14px/20px 'HGL'}
+                .info_btn span {color:#F18D00}
 
             }
         }
@@ -344,7 +364,7 @@ body {background:var(--background-bg-01, #F9F7F4);}
 #wrapper.main_step.comm_wrap {
     height:100vh; background: var(--warm-gray-scale-ot-02, linear-gradient(0deg, rgba(241, 141, 0, 0.10) 0%, rgba(241, 141, 0, 0.10) 100%), #FFF);
     #header {
-        background-color:transparent;
+        position:relative; padding:0; background-color:transparent;
         h1 {
             display:inline-block; width:auto;
             .ico_logo {width:25px; vertical-align:bottom}

@@ -126,14 +126,14 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
 }
-#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 dt {
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 > dt {
   display: flex;
   justify-content: space-between;
   align-items: center;
   position: relative;
   padding: 12px 16px;
 }
-#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 dt::after {
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 > dt::after {
   content: "";
   position: absolute;
   top: 0;
@@ -142,25 +142,48 @@ body {
   height: 1px;
   background-color: #EDEDED;
 }
-#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 dt:first-child::after {
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 > dt:first-child::after {
   display: none;
 }
-#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 dt div {
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 > dt div {
   font: 400 16px/24px "HMR";
 }
-#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 dt div span {
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 > dt div span {
   font: 600 12px "HGM";
   color: #D11B19;
   vertical-align: 0.1em;
   margin-right: 4px;
 }
-#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 dt .form-check {
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 > dt .form-check {
   margin: 0;
   top: 2px;
 }
 #wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1.style-2 dt div span {
   display: block;
   margin-bottom: 5px;
+}
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1.dl_dtdd > dd {
+  padding: 16px 20px;
+  border-top: 1px solid #EDEDED;
+  margin-top: 5px;
+}
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1.dl_dtdd > dd h3 {
+  text-align: center;
+  font: 400 16px/24px "HMR";
+}
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1.dl_dtdd > dd dl {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1.dl_dtdd > dd dl dt {
+  font: 400 14px/20px "HGM";
+  color: #555;
+}
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1.dl_dtdd > dd dl dd {
+  font: 500 14px/20px "HGM";
+  color: #333;
 }
 #wrapper #container .cotents_wrap .cotent_body .card .basic_mlr0 .card_basic {
   padding: 8px 0;
@@ -687,6 +710,47 @@ body {
 #wrapper #container .cotents_wrap .cotent_body .box_basic ul li + li {
   margin-top: 10px;
 }
+#wrapper #container .cotents_wrap .cotent_body .susin_intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  margin-top: 40px;
+}
+#wrapper #container .cotents_wrap .cotent_body .susin_intro .susin_intro_head h2 {
+  font: 400 30px/42px "HMR";
+  letter-spacing: 0.6px;
+}
+#wrapper #container .cotents_wrap .cotent_body .susin_intro .susin_intro_head p {
+  font: 400 16px/24px "HGL";
+  letter-spacing: 0.32px;
+}
+#wrapper #container .cotents_wrap .cotent_body .susin_intro .susin_intro_head p span {
+  font: 500 16px/24px "HGM";
+}
+#wrapper #container .cotents_wrap .cotent_body .susin_intro .susin_chrt {
+  width: 260px;
+  position: relative;
+  left: -22px;
+  top: -10px;
+}
+#wrapper #container .cotents_wrap .cotent_body .susin_txt_info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+#wrapper #container .cotents_wrap .cotent_body .susin_txt_info * {
+  font: 500 14px/20px "HGM";
+  color: #555;
+}
+#wrapper #container .cotents_wrap .cotent_body .susin_txt_info ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+}
 #wrapper #container .cotents_wrap .cotent_foot .info_btn {
   display: flex;
   position: absolute;
@@ -728,6 +792,8 @@ body {
   background: var(--warm-gray-scale-ot-02, linear-gradient(0deg, rgba(241, 141, 0, 0.1) 0%, rgba(241, 141, 0, 0.1) 100%), #FFF);
 }
 #wrapper.main_step.comm_wrap #header {
+  position: relative;
+  padding: 0;
   background-color: transparent;
 }
 #wrapper.main_step.comm_wrap #header h1 {

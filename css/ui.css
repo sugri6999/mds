@@ -316,11 +316,11 @@ button::-moz-focus-inner {border:0px; padding:0px}
     btn-type3 :(모  듈) 검색, 파일첨부
     btn-type4 :(기  타)
 */
-.btn-type1 {min-height:60px; line-height:58px; padding:0 20px 1px; background-color:#CDCDCD}
+.btn-type1 {min-height:60px; line-height:58px; padding:0 20px 1px; background-color:#F18D00}
 .btn-type1 span {color:#fff}
 .btn-type1.btn-primary {background:#F18D00; color:#fff}
 .btn-type1.btn-secondary {background:#777; color:#fff}
-.btn-type1[disabled] {background:#aaa; color:#fff}
+.btn-type1[disabled] {background:#CDCDCD; color:#fff}
 .btn-type2 {min-width:60px; line-height:50px; padding:0 20px 1px; background-color:#eee}
 .btn-type2 span {color:#191919}
 .btn-type2.btn-primary {background:#F18D00}
