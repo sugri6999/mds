@@ -122,16 +122,16 @@
             <button type="button" class="btn btn-type1 btn-block"><span>다음</span></button>
 			<!-- <button type="button" class="btn btn-type1 btn-block" aria-controls="popupContent" aria-haspopup="dialog" onclick="ui.popup.open('popupSelect', this);"><span>다음</span></button> -->
         </footer>
+        <!-- //Footer -->
 	</div>
-    <!-- //Footer -->
 
     <!-- Modal Basic-->
-    <div id="popupSelect" class="popup-wrap is-active" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle">
+    <div id="mailSelect" class="popup-wrap is-active" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle">
         <div class="popup popup-basic">
 			<div class="popup-inner">
 				<div class="popup-head">
 					<h3 id="popupSelectTitle" class="popup-title popup-focus">도메인을 선택해 주세요</h3>
-			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('mailSelect')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
 				</div>
 				<div class="popup-body">
                     <div class="item_list">

@@ -77,7 +77,6 @@ textarea.form-text {height:auto; padding:10px}
 .form_wrap.is-focused::after {background-color:#F18D00}
 .form_wrap.un_bordered::after {display:none}
 .form-input {width:100%; height:40px; padding:0; border-radius:0; background-color:transparent; border-bottom:1px solid #DBDBDB; line-height:22px; font: 100 16px/20px "HGL"; letter-spacing: -0.025em;}
-.form-input:hover,
 .form_wrap.is-focused .form-input {border-color:#F18D00}
 .form-input:focus {border-color:#F18D00; color:#F18D00}
 .form-input:disabled {background-color:transparent}

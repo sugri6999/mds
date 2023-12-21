@@ -119,33 +119,29 @@
         <!-- Footer -->
         <footer id="footer">
 			<button type="button" class="btn btn-type2 btn-block"><span>이전</span></button>
-			<button type="button" class="btn btn-type1 btn-block"><span>다음</span></button>
+			<button type="button" class="btn btn-type1 btn-block" onclick="ui.popup.open('popupContent', this);"><span>다음</span></button>
         </footer>
 	</div>
     <!-- //Footer -->
 
     <!-- Modal Basic-->
-    <div id="popupContent" class="popup-wrap is-active" data-popup="content" role="dialog" aria-labelledby="popupSelectTitle">
+    <div id="popupContent" class="popup-wrap" data-popup="content" role="dialog" aria-labelledby="popupSelectTitle" hidden>
         <div class="popup popup-basic">
 			<div class="popup-inner">
 				<div class="popup-head">                   
-			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('popupContent')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
 				</div>
 				<div class="popup-body">
 					<h4>보험료 납부가 완료되지 않았어요.</h4>
 					<p class="desc01 align-c">전자서명을 다시 한번 진행해주세요. <br>같은 문제가 반복되면 <br>모집자와 직접 상의해주세요.</p>
 				</div>
                 <div class="popup-foot">
-                    <button type="button" class="btn btn-type2 btn-primary"><span>확인</span></button>
+                    <button type="button" class="btn btn-type2 btn-primary" onclick="ui.popup.close('popupContent')"><span>확인</span></button>
                 </div>
 			</div>
 		</div>
     </div>
     <!-- //Modal -->
-
-    <!-- Dimmer -->
-    <div class="dimmer is-active" aria-hidden="true"></div>
-    <!-- //Dimmer -->
 </body>
 </html>
 

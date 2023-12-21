@@ -114,7 +114,7 @@
 															<dl class="radio_group">
 																<dt><em class="num">2</em> <h4>제공에 관한 사항</h4></dt>
 																<dd class="radio_title"><span>미동의</span><span>동의</span></dd>
-																<dt><span>[국내]고육식별정보</span></dt>
+																<dt><span>[국내]고유식별정보</span></dt>
 																<dd>
 																	<span class="form-check">
 																		<input type="radio" name="bRadio01" id="bRadio01" value="" />
@@ -209,7 +209,7 @@
 										<dl>
 											<dt class="accordion-title is-active">
 												<span class="accordion-toggle" role="button" aria-controls="accorContent11">
-													<span class="accordion-label"><em class="font_blue">필수</em> 상품소개 등을 위한 개인(신용)정보 처리 <br>상세 동의서 [계약자]<i class="arw arw-toggle"></i></span>
+													<span class="accordion-label"><em class="font_red">선택</em> 상품소개 등을 위한 개인(신용)정보 처리 <br>상세 동의서 [계약자]<i class="arw arw-toggle"></i></span>
 												</span>
 												<p class="align-r">
 													<span class="form-check txt_left">
@@ -248,10 +248,10 @@
 																	</span>
 																</dd>
 															</dl>
-															<div class="check_default">
+															<div class="check_default checkbox_group">
 																<span class="form-check">
-																	<input type="checkbox" name="sCheck2" id="sCheck22" value="" />
-																	<label for="sCheck22"><span>전체</span></label>
+																	<input type="checkbox" name="sCheck2" id="check_all" value="" />
+																	<label for="check_all"><span>전체</span></label>
 																</span>
 																<span class="form-check">
 																	<input type="checkbox" name="sCheck2" id="sCheck23" value="" />
@@ -319,8 +319,8 @@
 												</span>
 												<p class="abs_check">
 													<span class="form-check">
-														<input type="checkbox" name="" id="fCheck13" value="" />
-														<label for="fCheck13"><span></span></label>
+														<input type="checkbox" name="" id="hCheck13" value="" />
+														<label for="hCheck13"><span></span></label>
 													</span>
 												</p>
 											</dt>
@@ -370,9 +370,11 @@
 					
 					<div class="card card_basic basic_info margin-t30">
 						<div class="card_header jc-center">
-							<h3 class="basic_title_h3">실손중복 가입 이유</h3>
+							<h3 class="basic_title_h3">실손중복 가입 사유</h3>
 						</div>
-						<div class="card_body" style="min-height:120px;"></div>
+						<div class="card_body" style="min-height:120px;">
+							<textarea style="height:120px; width:100%;"></textarea>
+						</div>
 					</div>
 				</div>
 			</div>

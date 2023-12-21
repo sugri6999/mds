@@ -42,10 +42,10 @@
                             </div>
                             <div class="form_wrap">
                                 <div class="num_select">                                
-                                    <span class="text_label"><input type="text" id="" name="" class="form-input" value="010"></span> 
+                                    <span class="text_label"><input type="text" id="" name="" class="form-input" value="010" disabled /></span> 
                                     <button type="button" class="btn_select"><i class="arw arw-toggle"></i></button>
                                 </div>
-                                <span class="type_t"><input type="text" id="" name="" class="form-input" value="12345678" /></span>
+                                <span class="type_t"><input type="text" id="" oninput="autoHyphen(this)" maxlength="9" name="" class="form-input" value="1234-5678" oninput="autoHyphen(this)" maxlength="9" TextField(keyboardType: TextInputType.number, controller: val1, inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9]'))],) /></span>
                             </div>
                         </div>
                         <div class="form_item">
@@ -55,6 +55,7 @@
                             <div class="form_wrap">
                                 <form>
                                     <input type="text" id="dateControll" name="dateControll" class="form-input" onkeyup="this.value = date_mask(this.value)" maxlength="10" value="1980.12.12" />
+                                    <button type="reset" class="btn_clear"><i class="arw arw-close"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -90,12 +91,12 @@
 					<h3 id="popupSelectTitle" class="popup-title popup-focus">약관동의</h3>                    
 			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect"  onclick="ui.popup.close('Select')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
 				</div>
-				<div class="popup-body">
+				<div class="popup-body checkbox_group">
 					<div class="card card_info card_info02 margin-t20">
 						<div class="form_item align_r">
                             <span class="form-check txt_left">
-                                <input type="checkbox" name="" id="sCheck11" value="" />
-                                <label for="sCheck11">개인(신용)정보에 전체 동의합니다.</label>
+                                <input type="checkbox" name="" id="check_all" value="" />
+                                <label for="check_all">개인(신용)정보에 전체 동의합니다.</label>
                             </span>
                         </div>
 					</div>
@@ -109,8 +110,8 @@
                         </div>
 						<div class="form_item align_r">
                             <span class="form-check txt_left">
-                                <input type="checkbox" name="" id="sCheck11" value="" />
-                                <label for="sCheck11">개인(신용)정보의 제공에 관한 사항</label>
+                                <input type="checkbox" name="" id="sCheck12" value="" />
+                                <label for="sCheck12">개인(신용)정보의 제공에 관한 사항</label>
                             </span>
                         </div>
 					</div>

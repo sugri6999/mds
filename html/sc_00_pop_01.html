@@ -56,7 +56,7 @@
 							</div>
 							<div class="form_wrap">
 								<input type="text" id="" name="" class="form-input" placeholder="일자를 선택해주세요" />
-								<button type="button" class="btn_select"><i class="arw arw-toggle"></i></button>
+								<button type="button" class="btn_select" onclick="ui.popup.open('daySelect', this);"><i class="arw arw-toggle"></i></button>
 							</div>
 						</div>
 						<div class="form_item">
@@ -82,7 +82,7 @@
 							</div>
 							<div class="form_wrap">
 								<input type="number" id="" name="" class="form-input" value="123456789" />
-								<button type="button" class="btn_select"><i class="arw arw-close"></i></button>
+								<button type="button" class="btn_clear"><i class="arw arw-close"></i></button>
 							</div>
 						</div>
 						<div class="form_item">
@@ -119,33 +119,80 @@
         <!-- Footer -->
         <footer id="footer">
 			<button type="button" class="btn btn-type2 btn-block"><span>이전</span></button>
-			<button type="button" class="btn btn-type1 btn-block"><span>다음</span></button>
+			<button type="button" class="btn btn-type1 btn-block" onclick="ui.popup.open('popupContent', this);"><span>다음</span></button>
         </footer>
 		<!-- //Footer -->
 	</div>
 
     <!-- Modal Basic-->
-    <div id="popupContent" class="popup-wrap is-active" data-popup="content" role="dialog" aria-labelledby="popupSelectTitle">
+    <div id="popupContent" class="popup-wrap" data-popup="content" role="dialog" aria-labelledby="popupSelectTitle" hidden>
         <div class="popup popup-basic">
 			<div class="popup-inner">
 				<div class="popup-head">                   
-			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('popupContent')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
 				</div>
 				<div class="popup-body">
 					<h4>자동이체 신청을<br>취소 하시겠어요?</h4>
 				</div>
                 <div class="popup-foot">
-                    <button type="button" class="btn btn-type2"><span>아니요</span></button>
-                    <button type="button" class="btn btn-type2"><span>네</span></button>
+                    <button type="button" class="btn btn-type2" onclick="ui.popup.close('popupContent')"><span>아니요</span></button>
+                    <button type="button" class="btn btn-type2 btn-primary"><span>네</span></button>
                 </div>
 			</div>
 		</div>
     </div>
     <!-- //Modal -->
 
-    <!-- Dimmer -->
-    <div class="dimmer is-active" aria-hidden="true"></div>
-    <!-- //Dimmer -->
+	<!-- Modal Basic-->	
+    <div id="daySelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
+        <div class="popup popup-basic">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">일자를 선택해 주세요</h3>
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기" onclick="ui.popup.close('daySelect')"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+                    <div class="item_list">
+                        <ul>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio11" value="" checked />
+                                        <label for="sRadio11">5일</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio12" value="" />
+                                        <label for="sRadio12">15일</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio13" value="" />
+                                        <label for="sRadio13">20일</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="sRdio01" id="sRadio14" value="" />
+                                        <label for="sRadio14">25일</label>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </div><!-- 은행선택 -->
+    <!-- //Modal -->
 </body>
 </html>
 

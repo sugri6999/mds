@@ -710,17 +710,67 @@ $(document).ready(function(){
 			return false;
 		});
 	});
+	// $('.form_wrap').each(function(){
+	// 	$(this).find('.form-input').on('keyup focus', function(){
+	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+		
+	// 		if($(this).val().length == 0){
+	// 			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+	// 		} else {
+	// 			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+	// 		}
+	// 	});
+	
+	// 	$(this).find('.form-input').on('blur', function(){
+	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+	// 	});
+	
+	// 	$(this).find('.btn_clear').on('click touchstart', function(){
+	// 		$(this).closest('.form_wrap').find('.form-input').val('');
+	// 		$(this).closest('.form_wrap').find('.btn_clear').attr('style', 'visibility: visible');
+	// 		return false;
+	// 	});
+	// });
 	
 	$("#datenumber").keyup(function() {
 		var replace_text = $(this).val().replace(/[^-0-9]/g, '');
 		$(this).val(replace_text);
 	});
 
+	// 모달외부영역 클릭시 닫히게
+	// $(document).mouseup(function (e){
+	// 	var LayerPopup = $(".popup-wrap");
+	// 	var dimmer = $(".dimmer");
+	// 	if(LayerPopup.has(e.target).length === 0){
+	// 		LayerPopup.removeClass("is-active");
+	// 		dimmer.removeClass("is-active");
+	// 	}
+	// });
+
+	// 체크박스 전체 선택
+	$(".checkbox_group").on("click", "#check_all", function () {
+		$(this).parents(".checkbox_group").find('input').prop("checked", $(this).is(":checked"));
+	});
+
+	// 체크박스 개별 선택
+	// $(".checkbox_group").on("click", ".normal", function() {
+	//     var is_checked = true;
+
+	//     $(".checkbox_group .normal").each(function(){
+	//         is_checked = is_checked && $(this).is(":checked");
+	//     });
+
+	//     $("#check_all").prop("checked", is_checked);
+	// });
+	
+	
+	
+
 
 
 });
 
-// 날짜를 yyyy.mm.dd 형식으로 만들어 줌.
+// 날짜 입력시 자동 yyyy.mm.dd 형식으로 만들기
 function date_mask(objValue) {
 	var v = objValue.replace("..", ".");
 
@@ -731,4 +781,43 @@ function date_mask(objValue) {
 		}
 
 	return v;
+}
+
+// 휴대폰 뒷자리 자동하이픈
+const autoHyphen = (target) => {
+	target.value = target.value
+	 .replace(/[^0-9]/g, '')
+	 .replace(/^(\d{0,4})(\d{0,4})$/g, "$1-$2").replace(/(\-{1})$/g, "");
+}
+const phoneAutoHyphen = (target) => {
+	target.value = target.value
+	 .replace(/[^0-9]/g, '')
+	 .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
+}
+
+// 체크시 버튼 활성화
+function agreeCheck(frm) {
+	if (frm.checkButton.disabled==true)
+	 frm.checkButton.disabled=false
+	else
+	 frm.checkButton.disabled=true
+}
+
+// 초기화 버튼
+function reset() {
+	document.querySelectorAll("input[type=text]")[0].value="";
+}
+
+
+const stNum = document.getElementsByClassName('#first_Num');
+const ndNum = document.getElementsByClassName('#second_Num');
+const nextButton = document.getElementsByClassName('#btn_next');
+stNum.addEventListener('keyup', activeEvent);
+ndNum.addEventListener('keyup', activeEvent);
+
+function activeEvent() {
+  switch(!(stNum.value && ndNum.value)){
+    case true : nextButton.disabled = true; break;
+    case false : nextButton.disabled = false; break
+  }
 }

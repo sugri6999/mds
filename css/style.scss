@@ -264,7 +264,7 @@ body {background:var(--background-bg-01, #F9F7F4);}
                         .form_wrap {
                             position:relative;
                             .btn_select,
-                            .btn_clear {position:absolute; right:-10px; top:0; width:40px; height:40px}
+                            .btn_clear {position:absolute; right:-10px; top:0; width:40px; height:40px;}
                             .arw-toggle {width:16px; height:16px; background:url('../images/combo_down.svg') no-repeat  center center}
                             .arw-close::before, .arw-close::after {height:15px}
                         }
@@ -292,15 +292,27 @@ body {background:var(--background-bg-01, #F9F7F4);}
                 
                 .cert_wrap {
                     display:flex; flex-direction:column; align-items:center; margin-top:10px;
-                    .app_logo {width:68px}
+                    .app_logo {
+                        width:68px;
+                        img {border-radius:10px}
+                    }
                     .info_txt {margin-top:16px; text-align:center; font:400 18px/28px "HMR"}
                     .info_step {
-                        display:inline-flex; flex-direction:column; align-items:flex-start; gap:24px; margin-top:40px;
+                        display:inline-flex; flex-direction:column; align-items:flex-start; gap:12px; margin-top:40px; width:100%;
                         li {
-                            font:400 16px/24px "HMR";
+                            display:flex; align-items:center; width:100%; border-radius:10px; padding:16px; background:rgba(255, 255, 255, 0.70); font:400 16px/24px "HMR";
                             span {font:400 16px/24px "HMR"}
-                            em {display:inline-block; width:21px; border-radius:4px; background:#F1EBE6;  text-align:center; font:600 14px/21px "HGM"}
+                            em {display:inline-block; width:21px; margin-right:6px; border-radius:4px; background:#F1EBE6; text-align:center; font:600 14px/22px "HGM"}
                         }
+                    }
+                }
+
+                .box_basic {
+                    display:flex; padding:16px; flex-direction:column; justify-content:center; gap:10px; border-radius:8px; background:var(--Warm-Gray-Scale-O-T-02, linear-gradient(0deg, rgba(241, 141, 0, 0.10) 0%, rgba(241, 141, 0, 0.10) 100%), #FFF);
+                    h4 {flex:1 0 0; font:400 16px/24px 'HMR'; color:var(--Gray-Scale-Gray-08-555555, #555)}
+                    ul {
+                        li {color:var(--Gray-Scale-Gray-08-555555, #555);; font:400 14px/20px 'HGL'}
+                        li + li {margin-top:10px}
                     }
                 }
             }
@@ -591,7 +603,14 @@ body {background:var(--background-bg-01, #F9F7F4);}
         }
         .popup-body {
             padding:0 24px 20px;
-            .title_disc {width:90%; margin:6px auto 20px; font:400 14px/20px 'HGM'; text-align:center}
+            .title_disc {
+                width:90%; margin:6px auto 20px; font:400 14px/20px 'HGM'; text-align:center;
+                span {font:400 14px/20px 'HGM'}
+            }
+            .title_disc02 {
+                width:90%; margin:6px auto 20px; font:500 16px/24px 'HGM'; text-align:center;
+                span {font:500 16px/24px 'HGM'}
+            }
             .info_wrap * {font-family:'HGL'}
             .info_wrap {
                 margin-top:30px;

@@ -42,10 +42,10 @@
                             </div>
                             <div class="form_wrap is-focused">
                                 <div class="num_select">                                
-                                    <span class="text_label"><input type="text" id="" name="" class="form-input" value="010"></span> 
+                                    <span class="text_label"><input type="text" id="" name="" class="form-input" value="010" disabled /></span> 
                                     <button type="button" class="btn_select" onclick="ui.popup.open('daySelect', this);"><i class="arw arw-toggle"></i></button>
                                 </div>
-                                <span class="type_t"><input type="text" id="" name="" class="form-input" placeholder="휴대전화번호 입력" /></span>
+                                <span class="type_t"><input type="text" id="" name="" class="form-input" oninput="autoHyphen(this)" maxlength="9" placeholder="휴대전화번호 입력" TextField(keyboardType: TextInputType.number, controller: val1, inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9]'))],) /></span>
                             </div>
                         </div>
                         <div class="form_item">
@@ -55,6 +55,7 @@
                             <div class="form_wrap">
                                 <form>
                                     <input type="text" id="dateControll" name="dateControll" class="form-input" onkeyup="this.value = date_mask(this.value)" maxlength="10" value="1980.12.12" />
+                                    <button type="reset" class="btn_clear"><i class="arw arw-close"></i></button>
                                 </form>
                             </div>
                         </div>
@@ -129,7 +130,7 @@
                                 <div class="form_item align_r">
                                     <span class="form-radio txt_left">
                                         <input type="radio" name="sRdio01" id="sRadio15" value="" />
-                                        <label for="sRadio15">017</label>
+                                        <label for="sRadio15">018</label>
                                     </span>
                                 </div>
                             </li>
@@ -137,7 +138,7 @@
                                 <div class="form_item align_r">
                                     <span class="form-radio txt_left">
                                         <input type="radio" name="sRdio01" id="sRadio16" value="" />
-                                        <label for="sRadio16">017</label>
+                                        <label for="sRadio16">019</label>
                                     </span>
                                 </div>
                             </li>

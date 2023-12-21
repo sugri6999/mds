@@ -41,8 +41,8 @@
                                 <label for="">주민등록번호/외국인등록번호</label>
                             </div>
                             <div class="form_wrap is-focused">
-                                <span class="type_t hypen"><input type="text" id="" name="" class="form-input" maxlength="6" placeholder="앞 6자리" /></span>
-                                <span class="type_t"><input type="password" id="" name="" class="form-input" maxlength="7" placeholder="뒤 7자리" /></span>
+                                <span class="type_t hypen"><input type="text" id="first_Num" name="" class="form-input" maxlength="6" placeholder="앞 6자리" TextField(keyboardType: TextInputType.number, controller: val1, inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9]'))],) /></span>
+                                <span class="type_t"><input type="password" id="second_Num" name="" class="form-input" maxlength="7" /></span>
                             </div>
                         </div>
                         <div class="form_item">
@@ -64,7 +64,7 @@
 
         <!-- Footer -->
         <footer id="footer">
-			<button type="button" class="btn btn-type1 btn-block"><span>다음</span></button>
+			<button type="button" id="btn_next" class="btn btn-type1 btn-block" disabled><span>다음</span></button>
         </footer>
         <!-- //Footer -->
 	</div>

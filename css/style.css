@@ -629,6 +629,9 @@ body {
 #wrapper #container .cotents_wrap .cotent_body .cert_wrap .app_logo {
   width: 68px;
 }
+#wrapper #container .cotents_wrap .cotent_body .cert_wrap .app_logo img {
+  border-radius: 10px;
+}
 #wrapper #container .cotents_wrap .cotent_body .cert_wrap .info_txt {
   margin-top: 16px;
   text-align: center;
@@ -638,10 +641,17 @@ body {
   display: inline-flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 24px;
+  gap: 12px;
   margin-top: 40px;
+  width: 100%;
 }
 #wrapper #container .cotents_wrap .cotent_body .cert_wrap .info_step li {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-radius: 10px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.7);
   font: 400 16px/24px "HMR";
 }
 #wrapper #container .cotents_wrap .cotent_body .cert_wrap .info_step li span {
@@ -650,10 +660,32 @@ body {
 #wrapper #container .cotents_wrap .cotent_body .cert_wrap .info_step li em {
   display: inline-block;
   width: 21px;
+  margin-right: 6px;
   border-radius: 4px;
   background: #F1EBE6;
   text-align: center;
-  font: 600 14px/21px "HGM";
+  font: 600 14px/22px "HGM";
+}
+#wrapper #container .cotents_wrap .cotent_body .box_basic {
+  display: flex;
+  padding: 16px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  border-radius: 8px;
+  background: var(--Warm-Gray-Scale-O-T-02, linear-gradient(0deg, rgba(241, 141, 0, 0.1) 0%, rgba(241, 141, 0, 0.1) 100%), #FFF);
+}
+#wrapper #container .cotents_wrap .cotent_body .box_basic h4 {
+  flex: 1 0 0;
+  font: 400 16px/24px "HMR";
+  color: var(--Gray-Scale-Gray-08-555555, #555);
+}
+#wrapper #container .cotents_wrap .cotent_body .box_basic ul li {
+  color: var(--Gray-Scale-Gray-08-555555, #555);
+  font: 400 14px/20px "HGL";
+}
+#wrapper #container .cotents_wrap .cotent_body .box_basic ul li + li {
+  margin-top: 10px;
 }
 #wrapper #container .cotents_wrap .cotent_foot .info_btn {
   display: flex;
@@ -1250,6 +1282,18 @@ body {
   margin: 6px auto 20px;
   font: 400 14px/20px "HGM";
   text-align: center;
+}
+.popup-wrap .popup-basic .popup-body .title_disc span {
+  font: 400 14px/20px "HGM";
+}
+.popup-wrap .popup-basic .popup-body .title_disc02 {
+  width: 90%;
+  margin: 6px auto 20px;
+  font: 500 16px/24px "HGM";
+  text-align: center;
+}
+.popup-wrap .popup-basic .popup-body .title_disc02 span {
+  font: 500 16px/24px "HGM";
 }
 .popup-wrap .popup-basic .popup-body .info_wrap * {
   font-family: "HGL";
