@@ -26,7 +26,7 @@ body {background:var(--background-bg-01, #F9F7F4);}
             .cotent_heder {
                 .step_box {
                     display:flex; justify-content:space-between; align-items:center; height:36px; padding:0 16px; background-color:#020202; border-radius:18px;
-                    p {color:#fff; font-size:14px}
+                    p {color:#fff; font:400 14px/20px 'HML'; letter-spacing:-.5px}
                     ul {
                         display:flex; align-items:center;
                         li {
@@ -84,6 +84,8 @@ body {background:var(--background-bg-01, #F9F7F4);}
                                 }
                             }
                         }
+
+                        .accordion-title {background-color:#fff; border-top-left-radius:10px; border-top-right-radius:10px}
                     }
                     .basic_mlr0 {
                         .card_basic {
@@ -105,7 +107,8 @@ body {background:var(--background-bg-01, #F9F7F4);}
                                 .style-9 {
                                     display:flex; flex-wrap:wrap; margin-top:12px; margin-bottom:-6px;
                                     dt, dd {position:relative; width:50%; padding:8px 0}
-                                    dt {font:400 14px 'HGL'; color:#555; line-height:20px;
+                                    dt {
+                                        font:400 14px/20px 'HGL'; color:#555;
                                         &::before {content:''; position:absolute; top:0; left:0; right:-100%; height:1px; background-color:#EDEDED}
                                         &:first-child::before {display:none}
                                     }
@@ -115,6 +118,11 @@ body {background:var(--background-bg-01, #F9F7F4);}
                                     display:flex; justify-content:center; align-items:center;
                                     .disabled_ment {font:600 32px/30px 'HGM'; color:#EAEAEA}
 
+                                }
+                                .list.style-10 {
+                                    display:flex; flex-direction:column; justify-content:center; gap:8px;
+                                    li {font:500 14px/20px 'HGM'; color:#333}
+                                    li + li {padding-top:8px; border-top:1px solid #EDEDED}
                                 }
                             }
                         }

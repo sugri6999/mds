@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<title>현대해상</title>
+<link type="text/css" rel="stylesheet" href="../css/import.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/lib/jquery-3.3.1.min.js"></script>
+<script src="../js/lib/prefixfree.min.js"></script>
+<script src="../js/utility.js"></script>
+<script src="../js/device.js"></script>
+<script src="../js/ui.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="comm_wrap">
+		<!-- HEADER -->
+    	<header id="header">
+			<h1><img src="../images/g62.svg" class="ico_logo" alt="H" /></h1>
+			<h2>약관동의</h2>
+			<p><img src="../images/ico_chat.svg" alt="" /></p>
+		</header>
+        <!-- //HEADER -->
+
+		<!-- Container -->
+		<section id="container">
+			<div class="cotents_wrap">
+				<div class="cotent_heder">
+					<div class="step_box">
+						<p>약관 동의를 해주세요.</p>
+						<ul>
+							<li><span class="pointer">1</span></li>
+							<li><span class="pointer is-active">2</span></li>
+							<li><span class="pointer">3</span></li>
+						</ul>
+					</div><!-- //계약단계 Step 표시 -->
+					<p class="title_disc">필수 및 선택 동의 항목을 <br>선택해주세요.</p>
+					<div class="info_wrap">
+						<div class="info_title">계약정보</div>
+						<div class="info_box">
+							<p>HiCar 개인용</p>
+						</div>
+					</div>
+				</div>
+				<div class="cotent_body">
+					<div class="card card_default margin-t30">
+						<div class="card_body">
+							<h3 class="card_title">개인(신용)정보 동의</h3>
+							<div class="accordion-wrap">
+								<ul role="presentation" class="accordion accordion-basic5">
+									<li class="card card_shadow">
+										<dl>
+											<dt class="accordion-title is-active">
+												<span class="accordion-toggle" role="button" aria-controls="accorContent11">
+													<span class="accordion-label"><em class="font_red">필수</em> 계약의 체결, 이행 등을 위한 <br>개인(신용) 정보 처리 상세 동의서<i class="arw arw-toggle"></i></span>
+												</span>
+												<p class="align-r">
+													<span class="form-check txt_left">
+														<input type="checkbox" name="" id="sCheck13" value="" />
+														<label for="sCheck13"><span>전체동의</span></label>
+													</span>
+												</p>
+											</dt>
+											<dd id="accorContent11" class="accordion-content is-active" aria-hidden="false">
+												<div class="accordion-inner">
+													<ol class="car_agree">
+														<li>
+															<dl class="radio_group">
+																<dt></dt>
+																<dd class="radio_title"><span>미동의</span><span>동의</span></dd>
+																<dt><em class="num">1</em> <h4>수집, 이용에 관한 사항</h4></dt>
+																<dd>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio01" id="sRadio01" value="" />
+																		<label for="sRadio01"></label>
+																	</span>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio01" id="sRadio02" value="" />
+																		<label for="sRadio02"></label>
+																	</span>
+																</dd>
+                                                                <hr />
+																<dt><em class="num">2</em> <h4>조회에 관한 사항</h4></dt>
+																<dd>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio11" id="sRadio11" value="" />
+																		<label for="sRadio11"></label>
+																	</span>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio11" id="sRadio12" value="" />
+																		<label for="sRadio12"></label>
+																	</span>
+																</dd>
+                                                                <hr />
+																<dt><em class="num">3</em> <h4>제공에 관한 사항</h4></dt>
+																<dd>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio21" id="sRadio21" value="" />
+																		<label for="sRadio21"></label>
+																	</span>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio21" id="sRadio22" value="" />
+																		<label for="sRadio22"></label>
+																	</span>
+																</dd>
+                                                                <hr />
+																<dt><em class="num">4</em> <h4>민감정보 및 고유식별정보의 <br>처리에 관한 사항</h4></dt>
+																<dd class="margin-t-20">
+																	<span class="form-check">
+																		<input type="radio" name="sRadio31" id="sRadio31" value="" />
+																		<label for="sRadio31"></label>
+																	</span>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio31" id="sRadio32" value="" />
+																		<label for="sRadio32"></label>
+																	</span>
+																</dd>
+                                                                <dt><span style="margin:0;">질병, 상해정보처리</span></dt>
+																<dd>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio41" id="sRadio41" value="" />
+																		<label for="sRadio41"></label>
+																	</span>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio41" id="sRadio42" value="" />
+																		<label for="sRadio42"></label>
+																	</span>
+																</dd>
+                                                                <dt style="padding:5px 0 0;"><span>주민등록번호/ <br>외국인등록번호 처리</span></dt>
+																<dd>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio51" id="sRadio51" value="" />
+																		<label for="sRadio51"></label>
+																	</span>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio51" id="sRadio52" value="" />
+																		<label for="sRadio52"></label>
+																	</span>
+																</dd>
+															</dl>
+														</li>
+													</ol>
+												</div>
+											</dd>
+										</dl>
+									</li>
+                                    
+									<li class="card card_shadow">
+										<dl>
+											<dt class="accordion-title is-active">
+												<span class="accordion-toggle" role="button" aria-controls="accorContent11">
+													<span class="accordion-label"><em class="font_blue">선택</em> 상품소개 등을 위한 <br>개인(신용)정보 처리 동의<i class="arw arw-toggle"></i></span>
+												</span>
+												<p class="align-r">
+													<span class="form-check txt_left">
+														<input type="checkbox" name="" id="sCheck53" value="" />
+														<label for="sCheck53"><span>전체동의</span></label>
+													</span>
+												</p>
+											</dt>
+											<dd id="accorContent11" class="accordion-content is-active" aria-hidden="false">
+												<div class="accordion-inner">
+													<ol class="car_agree">
+														<li>
+															<dl class="radio_group">
+																<dt></dt>
+																<dd class="radio_title"><span>미동의</span><span>동의</span></dd>
+																<dt><em class="num">1</em> <h4>수집, 이용에 관한 사항</h4></dt>
+																<dd>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio61" id="sRadio61" value="" />
+																		<label for="sRadio61"></label>
+																	</span>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio61" id="sRadio62" value="" />
+																		<label for="sRadio62"></label>
+																	</span>
+																</dd>
+                                                                <hr />
+																<dt><em class="num">2</em> <h4>제공에 관한 사항</h4></dt>
+																<dd>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio71" id="sRadio71" value="" />
+																		<label for="sRadio71"></label>
+																	</span>
+																	<span class="form-check">
+																		<input type="radio" name="sRadio71" id="sRadio72" value="" />
+																		<label for="sRadio72"></label>
+																	</span>
+																</dd>
+															</dl>
+														</li>
+													</ol>
+												</div>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+								
+								<ul role="presentation" class="accordion accordion-basic5 margin-t24">
+									<li class="card card_shadow">
+										<dl>
+											<dt class="accordion-title is-active">
+												<span class="accordion-toggle" role="button" aria-controls="accorContent11">
+													<span class="accordion-label"><em class="font_red">필수</em> 통신수단을 이용한 계약 해지 동의</span>
+												</span>
+												<p class="abs_check">
+													<span class="form-check">
+														<input type="checkbox" name="" id="dCheck13" value="" />
+														<label for="dCheck13"><span></span></label>
+													</span>
+												</p>
+											</dt>
+											<dd id="accorContent11" class="accordion-content is-active" aria-hidden="false">
+												<div class="accordion-inner"></div>
+											</dd>
+											
+											<dt class="accordion-title is-active">
+												<span class="accordion-toggle" role="button" aria-controls="accorContent11">
+													<span class="accordion-label"><em class="font_red">필수</em> 전자서명을 통한 보험계약체결 동의</span>
+												</span>
+												<p class="abs_check">
+													<span class="form-check">
+														<input type="checkbox" name="" id="fCheck13" value="" />
+														<label for="fCheck13"><span></span></label>
+													</span>
+												</p>
+											</dt>
+											<dd id="accorContent11" class="accordion-content is-active" aria-hidden="false">
+												<div class="accordion-inner"></div>
+											</dd>
+										</dl>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					
+					<div class="card card_basic gapillan_wrap margin-t24">
+						<div class="card_header jc-center position-r">
+							<h3 class="basic_title_h3">청약서류 전달정보</h3>
+                            <button type="button" class="abs_btn" onclick="ui.popup.open('popupSelect', this);"><img src="../images/ico_pen.svg" alt="작성"></button>
+						</div>
+						<div class="card_body list_lelay">
+                            <div class="txt_lelay">
+                                <p>abc @ abc.com</p>
+                                <span class="style-6 primary"><i class="arw arw-check"></i></span>
+                            </div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section> 
+		<!-- //Container -->
+
+        <!-- Footer -->
+        <footer id="footer">
+			<button type="button" class="btn btn-type1 btn-block" onclick="ui.popup.open('popupSelect2', this);"><span>다음</span></button>
+        </footer>
+        <!-- //Footer -->
+	</div>
+
+	
+	<!-- Modal Basic-->
+    <div id="popupSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
+        <div class="popup popup-basic">
+			<div class="popup-inner">
+            <form>
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">청약서류 전달정보 입력</h3>                    
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('popupSelect')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+					<p class="title_disc">청약서류(청약서 및 약관 등) 전달을 위한 <br>수신 방법을 선택하여 주세요.</p>
+                    <div class="item_divider is-active">
+                        <div class="form_item col2">
+                            <div class="form_label">
+                                <label for="ipt_mail1">이메일</label>  <button type="button" onclick="reset()"><img src="../images/ico_reset.svg" alt=""></button>
+                            </div>
+                            <div class="form_wrap">
+                                <span class="type_t"><input type="text" id="ipt_mail1" name="" class="form-input" placeholder="hyundai" /></span>
+                                <span class="txt_at">@</span>
+                                <div class="mail_select">                                
+                                    <span class="text_label"><input type="text" id="ipt_mail2" name="" class="form-input" value="gmail.com" disabled></span> 
+                                    <button type="button" class="" onclick="ui.popup.open('mailSelect', this);"> <i class="arw arw-toggle"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form_item align_r margin-t6">
+                            <span class="form-check txt_left">
+                                <input type="checkbox" name="" id="sCheck11" value="" checked />
+                                <label for="sCheck11">고객님의 E-Mail 정보를 입력한 내용으로 변경</label>
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="item_divider margin-t20 margin-b20">
+                        <div class="form_item col2">
+                            <div class="form_label">
+                                <label for="">휴대전화</label>  <button type="button" onclick="reset()"><img src="../images/ico_reset.svg" alt=""></button>
+                            </div>
+                            <div class="form_wrap">
+                                <input type="text" id="" name="" class="form-input" oninput="phoneAutoHyphen(this)" maxlength="13" placeholder="휴대전화번호를 입력해주세요." />
+                            </div>
+                        </div>
+                    </div>
+				</div>
+                <div class="popup-foot">
+                    <button type="button" class="btn btn-type2 btn-primary btn-block"><span>서류전달정보 입력 완료</span></button>
+                </div>
+            </form>
+			</div>
+		</div>
+    </div>
+    <!-- //Modal -->
+
+	<!-- Modal Basic-->
+	<div id="mailSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
+		<div class="popup popup-basic">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">도메인을 선택해 주세요</h3>
+					<button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('mailSelect')" title="제목 팝업닫기" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+					<div class="item_list">
+						<ul>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio11" value="" checked />
+										<label for="dRadio11">직접입력</label>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio12" value="" />
+										<label for="dRadio12">gmail.com</label>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio13" value="" />
+										<label for="dRadio13">naver.com</label>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio14" value="" />
+										<label for="dRadio14">hanmail.net</label>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio15" value="" />
+										<label for="dRadio15">daum.net</label>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio16" value="" />
+										<label for="dRadio16">nate.com</label>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio17" value="" />
+										<label for="dRadio17">hotmail.com</label>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio18" value="" />
+										<label for="dRadio18">lycos.com</label>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio19" value="" />
+										<label for="dRadio19">dreamwiz.com</label>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio20" value="" />
+										<label for="dRadio20">korea.com</label>
+									</span>
+								</div>
+							</li>
+							<li>
+								<div class="form_item align_r">
+									<span class="form-radio txt_left">
+										<input type="radio" name="dRdio01" id="dRadio21" value="" />
+										<label for="dRadio21">chol.com</label>
+									</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Modal -->
+</body>
+</html>

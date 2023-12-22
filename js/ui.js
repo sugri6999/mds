@@ -198,6 +198,7 @@ var ui = {
 			$('#'+id).attr({'aria-hidden':'false'}).removeAttr('hidden').siblings().attr({'aria-hidden': 'true'}).attr('hidden', 'hidden');
 		},
 	},
+	
 
 	/*
 		기능정의: #acco
@@ -784,12 +785,12 @@ function date_mask(objValue) {
 }
 
 // 휴대폰 뒷자리 자동하이픈
-const autoHyphen = (target) => {
+function autoHyphen(target) {
 	target.value = target.value
 	 .replace(/[^0-9]/g, '')
 	 .replace(/^(\d{0,4})(\d{0,4})$/g, "$1-$2").replace(/(\-{1})$/g, "");
 }
-const phoneAutoHyphen = (target) => {
+function phoneAutoHyphen(target) {
 	target.value = target.value
 	 .replace(/[^0-9]/g, '')
 	 .replace(/^(\d{0,3})(\d{0,4})(\d{0,4})$/g, "$1-$2-$3").replace(/(\-{1,2})$/g, "");
@@ -809,15 +810,15 @@ function reset() {
 }
 
 
-const stNum = document.getElementsByClassName('#first_Num');
-const ndNum = document.getElementsByClassName('#second_Num');
-const nextButton = document.getElementsByClassName('#btn_next');
-stNum.addEventListener('keyup', activeEvent);
-ndNum.addEventListener('keyup', activeEvent);
+// const stNum = document.getElementsByClassName('#first_Num');
+// const ndNum = document.getElementsByClassName('#second_Num');
+// const nextButton = document.getElementsByClassName('#btn_next');
+// stNum.addEventListener('keyup', activeEvent);
+// ndNum.addEventListener('keyup', activeEvent);
 
-function activeEvent() {
-  switch(!(stNum.value && ndNum.value)){
-    case true : nextButton.disabled = true; break;
-    case false : nextButton.disabled = false; break
-  }
-}
+// function activeEvent() {
+//   switch(!(stNum.value && ndNum.value)){
+//     case true : nextButton.disabled = true; break;
+//     case false : nextButton.disabled = false; break
+//   }
+// }

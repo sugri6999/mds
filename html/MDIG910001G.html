@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<title>현대해상</title>
+<link type="text/css" rel="stylesheet" href="../css/import.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/lib/jquery-3.3.1.min.js"></script>
+<script src="../js/lib/prefixfree.min.js"></script>
+<script src="../js/utility.js"></script>
+<script src="../js/device.js"></script>
+<script src="../js/ui.js"></script>
+</head>
+<body>
+    <!-- Modal Basic-->
+    <div id="popupFull" class="popup-wrap is-active" data-popup="fullcontent" role="dialog" aria-labelledby="popupSelectTitle">
+        <div class="popup popup-basic popup-default">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">청약서/확인서 보기</h3>                    
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기" onclick="ui.popup.close('popupFull')"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+					<div class="canvas_wrap"></div>
+
+					<div class="step_num">
+						<span class="label style-5">1/1</span>
+					</div>
+				</div>
+                <div class="popup-foot">
+                    <button type="button" class="btn btn-type2 btn-primary btn-block"><span>확인</span></button>
+                </div>
+			</div>
+		</div>
+    </div>
+    <!-- //Modal -->
+</body>
+</html>
+

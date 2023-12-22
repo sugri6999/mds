@@ -785,38 +785,54 @@ button::-moz-focus-inner {border:0px; padding:0px}
 /*-------------------------------------------------------------------
 	##Tabs
 -------------------------------------------------------------------*/
-/* Default */
-.tab-content {display:none}
+.tab-nav li {position:relative; text-align:center;}
+.tab-nav a {display:block; padding:10px;}
+.tab-content {position:relative; padding:10px;}
+
+.tab-wrap {position:relative}
+.tab-nav li {position:relative; text-align:center}
+.tab-nav a {display:block; padding:10px}
+.tab-content {position:relative; padding:10px}
+.tab-nav.tab-float ul::after {display:block; clear:both; content:""}
+.tab-nav.tab-float li {float:left}
+.tab-nav.tab-flex ul {display:flex}
+.tab-nav.tab-flex li {float:none; width:100%}
+.tab-nav.tab-table ul {display:table; table-layout:fixed; width:100%}
+.tab-nav.tab-table li {display:table-cell; float:none}
+.tab-basic ul {background:#eee; border-bottom:1px solid #ff5400}
+.tab-basic ul::after {display:block; clear:both; content:""}
+.tab-basic li {float:left}
+.tab-basic a {background:#fff; color:#222}
+.tab-basic .is-selected a {background:#ff5400; color:#fff}
+
+/* .tab-content {display:none}
 .tab-content.is-active {display:block}
-/* Common */
+
 .tab-nav ul::after {display:block; clear:both; content:''}
 .tab-nav li {position:relative; float:left; text-align:center}
 .tab-nav li.col {padding:0}
 .tab-nav li > a {display:block; padding:10px}
 .tab-content {position:relative; padding:10px}
 .tab-content > .tab-inner {position:relative; z-index:1}
-@media screen and (max-width: 640px) {
-	.tab-nav li.col {margin-top:0}
-}
-/* Layout */
+
 .tab-flexible ul {display:table; table-layout:fixed; width:100%}
 .tab-flexible ul::after {display:none}
 .tab-flexible li {display:table-cell; float:none}
-/* Transition */
+
 .tab-transition a:hover::before,
 .tab-transition a:focus::before,
 .tab-transition .is-active a::before {transition:all 0.2s ease-out 0s; -webkit-transition:all 0.2s ease-out 0s; -moz-transition:all 0.2s ease-out 0s; -o-transition:all 0.2s ease-out 0s}
-/* Design Basic */
+
 .tab-basic ul {border-bottom:1px solid #0089b3}
 .tab-basic a {background:#eee; color:#222}
 .tab-basic .is-active a {background:#0089b3; color:#fff}
-/* Design Type1 */
+
 .tab-type1 a {color:#777}
 .tab-type1 a:before {content:''; display:inline-block; position:absolute; left:50%; bottom:0; width:0; height:2px; background-color:#0089b3; -ms-transform:translate(-50%, 0); transform:translate(-50%, 0); -webkit-transform:translate(-50%, 0)}
 .tab-type1 .is-active a {color:#0089b3}
 .tab-type1 a:hover:before,
 .tab-type1 a:focus:before,
-.tab-type1 .is-active a:before {width:100%}
+.tab-type1 .is-active a:before {width:100%} */
 
 /*-------------------------------------------------------------------
 	##Collapse

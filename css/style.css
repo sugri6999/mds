@@ -53,7 +53,8 @@ body {
 }
 #wrapper #container .cotents_wrap .cotent_heder .step_box p {
   color: #fff;
-  font-size: 14px;
+  font: 400 14px/20px "HML";
+  letter-spacing: -0.5px;
 }
 #wrapper #container .cotents_wrap .cotent_heder .step_box ul {
   display: flex;
@@ -185,6 +186,11 @@ body {
   font: 500 14px/20px "HGM";
   color: #333;
 }
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .accordion-title {
+  background-color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
 #wrapper #container .cotents_wrap .cotent_body .card .basic_mlr0 .card_basic {
   padding: 8px 0;
 }
@@ -233,9 +239,8 @@ body {
   padding: 8px 0;
 }
 #wrapper #container .cotents_wrap .cotent_body .card.card_basic.basic_info .card_body .style-9 dt {
-  font: 400 14px "HGL";
+  font: 400 14px/20px "HGL";
   color: #555;
-  line-height: 20px;
 }
 #wrapper #container .cotents_wrap .cotent_body .card.card_basic.basic_info .card_body .style-9 dt::before {
   content: "";
@@ -263,6 +268,20 @@ body {
 #wrapper #container .cotents_wrap .cotent_body .card.card_basic.basic_info .card_body.sign_wrap .disabled_ment {
   font: 600 32px/30px "HGM";
   color: #EAEAEA;
+}
+#wrapper #container .cotents_wrap .cotent_body .card.card_basic.basic_info .card_body .list.style-10 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+}
+#wrapper #container .cotents_wrap .cotent_body .card.card_basic.basic_info .card_body .list.style-10 li {
+  font: 500 14px/20px "HGM";
+  color: #333;
+}
+#wrapper #container .cotents_wrap .cotent_body .card.card_basic.basic_info .card_body .list.style-10 li + li {
+  padding-top: 8px;
+  border-top: 1px solid #EDEDED;
 }
 #wrapper #container .cotents_wrap .cotent_body .card.card_basic.gapillan_wrap {
   padding: 0;

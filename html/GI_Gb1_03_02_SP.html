@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<title>현대해상</title>
+<link type="text/css" rel="stylesheet" href="../css/import.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/lib/jquery-3.3.1.min.js"></script>
+<script src="../js/lib/prefixfree.min.js"></script>
+<script src="../js/utility.js"></script>
+<script src="../js/device.js"></script>
+<script src="../js/ui.js"></script>
+</head>
+<body>
+    
+    <!-- Modal Basic-->
+    <div id="popupSelect" class="popup-wrap is-active" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle">
+        <div class="popup popup-basic">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">약관의 중요한 내용</h3>                    
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('popupSelect')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body" style="height:calc(100vh - 200px); overflow-y:auto;">
+					<div class="accordion accordion-basic5 accordion-default">
+                        <dl>
+                            <dt class="accordion-title is-active">
+                                <span class="accordion-toggle" role="button" aria-controls="accorContent11">
+                                    <span class="accordion-label"><em class="font_red">필수</em> 실손담보 중복가입 계약자 확인 동의</span>
+                                    <p class="date">2023.10.13</p>
+                                </span>
+                                <p class="abs_check">
+                                    <span class="form-check">
+                                        <input type="checkbox" name="" id="dCheck13" value="">
+                                        <label for="dCheck13"><span></span></label>
+                                    </span>
+                                </p>
+                            </dt>
+                            <dd id="accorContent11" class="accordion-content is-active" aria-hidden="false">
+                                <div class="accordion-inner">
+                                    <p class="desc01">계약담당자에게 보험 가입 시 유의사항 및 약관의 중요 내용을 직접 설명 받았으며 청약서류의 내용과 동일함을 확인하였습니다.</p>
+                                    <hr />
+                                    <div class="dot_list padding-t10">
+                                        <ul class="bul bul-dot">
+                                            <li>청약의 철회에 관한 사항</li>
+                                            <li>지급한도, 면책사항, 감액지급 사항 등 보험금 지급제한 조건</li>
+                                            <li>고지의무 위반의 효과</li>
+                                            <li>계약의 취소 및 무효에 관한 사항</li>
+                                            <li>해지환급금에 관한 사항</li>
+                                            <li>분쟁조정절차에 관한 사항</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </dd>
+                        </dl>
+                    </div>
+				</div>
+                <div class="popup-foot">
+                    <button type="button" class="btn btn-type2 btn-primary btn-block"><span>다음</span></button>
+                </div>
+			</div>
+		</div>
+    </div>
+    <!-- //Modal -->
+
+</body>
+</html>
+
