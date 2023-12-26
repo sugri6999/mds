@@ -690,27 +690,27 @@ $(document).ready(function(){
 	// });
 
 	/* input 텍스트 clear */
-	$('.form_wrap').each(function(){
-		$(this).find('.form-input').on('keyup focus', function(){
-			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+	// $('.form_wrap').each(function(){
+	// 	$(this).find('.form-input').on('keyup focus', function(){
+	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
 		
-			if($(this).val().length == 0){
-				$(this).siblings('.btn_clear').attr('style', 'visibility: hidden');
-			} else {
-				$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
-			}
-		});
+	// 		if($(this).val().length == 0){
+	// 			$(this).siblings('.btn_clear').attr('style', 'visibility: hidden');
+	// 		} else {
+	// 			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+	// 		}
+	// 	});
 	
-		$(this).find('.form-input').on('blur', function(){
-			$(this).siblings('.btn_clear').attr('style', 'visibility: hidden');
-		});
+	// 	$(this).find('.form-input').on('blur', function(){
+	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: hidden');
+	// 	});
 	
-		$(this).find('.btn_clear').on('click touchstart', function(){
-			$(this).closest('.form_wrap').find('.form-input').val('');
-			$(this).closest('.form_wrap').find('.btn_clear').attr('style', 'visibility: hidden');
-			return false;
-		});
-	});
+	// 	$(this).find('.btn_clear').on('click touchstart', function(){
+	// 		$(this).closest('.form_wrap').find('.form-input').val('');
+	// 		$(this).closest('.form_wrap').find('.btn_clear').attr('style', 'visibility: hidden');
+	// 		return false;
+	// 	});
+	// });
 	// $('.form_wrap').each(function(){
 	// 	$(this).find('.form-input').on('keyup focus', function(){
 	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
@@ -764,7 +764,10 @@ $(document).ready(function(){
 	//     $("#check_all").prop("checked", is_checked);
 	// });
 	
-	
+	// 숫자만 입력
+	$("input:text[numberOnly]").on("keyup", function() {
+		$(this).val($(this).val().replace(/[^0-9]/g,""));
+	});
 	
 
 
@@ -822,3 +825,10 @@ function reset() {
 //     case false : nextButton.disabled = false; break
 //   }
 // }
+
+function clearInput(){
+	var el = document.getElementsByClassName('input-text');
+	for(var i=0; i<el.length; i++){	
+		el[i].value = '';
+	}
+}

@@ -22,7 +22,7 @@
 		<!-- HEADER -->
     	<header id="header">
 			<h1><img src="../images/g62.svg" class="ico_logo" alt="H" /></h1>
-			<h2>자동이체등록</h2>
+			<h2>보험금 지급</h2>
 			<p><img src="../images/ico_chat.svg" alt="" /></p>
 		</header>
         <!-- //HEADER -->
@@ -32,7 +32,7 @@
 			<div class="cotents_wrap">
 				<div class="cotent_heder">
 					<div class="step_box">
-						<p>보험료 결제를 위해 정보를 입력해 주세요.</p>
+						<p>보험금 지급를 위해 정보를 입력해 주세요.</p>
 						<ul>
 							<li><span class="pointer">1</span></li>
 							<li><span class="pointer">2</span></li>
@@ -41,53 +41,92 @@
 							<li><span class="pointer is-active">5</span></li>
 						</ul>
 					</div><!-- //계약단계 Step 표시 -->
-					<p class="title_disc">보험료 결제 방법을 <br>선택해 주세요.</p>
+					<p class="title_disc">보험금 지급 방법을 <br>선택해 주세요.</p>
 				</div>
 				<div class="cotent_body">
 					<div class="pay_wrap">
+						<div class="tab_wrap">
+                            <div class="tab-body">
+                                <!-- s: 제목1 -->
+                                <div id="tabContent01" class="tab-content" role="tabpanel" aria-labelledby="tabNav01" aria-hidden="true" hidden>
+                                    <div class="form_item">
+                                        <div class="form_label">
+                                            <label for="">계좌번호 입력</label>
+                                        </div>
+                                        <div class="form_wrap">
+                                            <input type="text" id="" name="" class="form-input" value="" placeholder="숫자만 입력해주세요." numberOnly />
+                                            <button type="button" class="btn_clear"><i class="arw arw-close txt_close"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="form_item">
+                                        <div class="form_label">
+                                            <label for="">은행선택</label>
+                                        </div>
+                                        <div class="form_wrap">
+                                            <input type="text" id="" name="" class="form-input" value="우리은행" placeholder="은행을 선택해주세요." disabled />
+                                            <button type="button" class="btn_select" onclick="ui.popup.open('bankSelect', this);"><i class="arw arw-toggle"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- e: 제목1 -->
+                                <!-- s: 제목2 -->
+                                <div id="tabContent02" class="tab-content" role="tabpanel" aria-labelledby="tabNav02" aria-hidden="true" hidden>
+                                    <div class="form_item">
+                                        <div class="form_label">
+                                            <label for="">할부기간</label>
+                                        </div>
+                                        <div class="form_wrap">
+                                            <input type="text" id="" name="" class="form-input" value="" placeholder="일시불" disabled />
+                                            <button type="button" class="btn_select" onclick="ui.popup.open('monthSelect', this);"><i class="arw arw-toggle"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="form_item">
+                                        <div class="form_label">
+                                            <label for="">유효기간</label>
+                                        </div>
+                                        <div class="form_wrap">
+                                            <input type="text" id="" name="" class="form-input" value="2028년12월" placeholder="YYYYMM" />
+                                            <button type="button" class="btn_clear"><i class="arw arw-close txt_close"></i></button>
+                                        </div>
+                                    </div>
+                                    <div class="form_item">
+                                        <div class="form_label">
+                                            <label for="">신용카드번호</label>
+                                        </div>
+                                        <div class="form_wrap col4">
+                                            <input type="text" id="" name="" class="form-input" value="1234" placeholder="4자리" />
+                                            <input type="password" id="" name="" class="form-input" value="****" placeholder="4자리" />
+                                            <input type="password" id="" name="" class="form-input" value="****" placeholder="4자리" />
+                                            <input type="text" id="" name="" class="form-input" value="567" placeholder="4자리" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- e: 제목2 -->
+                            </div>      
+
+                            <div class="tab-nav tab-basic form_item">
+                                <div class="form_label">
+                                    <label for="">보험금 지급 방법</label>
+                                </div>
+                                <ul role="tablist">
+                                    <li role="none">
+                                        <a href="#tabContent01" id="tabNav01" role="tab" aria-controls="tabContent01" aria-selected="false"><span>실시간 계좌이체</span></a>
+                                    </li>
+                                    <li role="none">
+                                        <a href="#tabContent02" id="tabNav02" role="tab" aria-controls="tabContent02" aria-selected="false"><span>신용카드</span></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        
 						<div class="form_item">
 							<div class="form_label">
-								<label for="">계좌번호 입력</label>
+								<label for="">결제금액</label>
 							</div>
 							<div class="form_wrap">
-								<input type="text" id="" name="" class="form-input" value="" placeholder="숫자만 입력해주세요." />
-								<button type="button" class="btn_select"><i class="arw arw-close txt_close"></i></button>
+								<input type="text" id="" name="" class="form-input" value="722,180원" disabled />
 							</div>
 						</div>
-						<div class="form_item">
-							<div class="form_label">
-								<label for="">은행선택</label>
-							</div>
-							<div class="form_wrap is-focused">
-								<input type="text" id="" name="" class="form-input" value="우리은행" placeholder="은행을 선택해주세요." disabled />
-								<button type="button" class="btn_select" onclick="ui.popup.open('bankSelect', this);"><i class="arw arw-toggle"></i></button>
-							</div>
-						</div>
-
-                        <div class="tab-nav tab-basic">
-                            <ul role="tablist">
-                                <li role="none" class="is-selected">
-                                    <a href="#tabContent01" id="tabNav01" role="tab" aria-controls="tabContent01" aria-selected="true"><span>실시간 계좌이체</span></a>
-                                </li>
-                                <li role="none">
-                                    <a href="#tabContent02" id="tabNav02" role="tab" aria-controls="tabContent02" aria-selected="false"><span>신용카드</span></a>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <div class="tab-body">
-                            <!-- s: 제목1 -->
-                            <div id="tabContent01" class="tab-content" role="tabpanel" aria-labelledby="tabNav01" aria-hidden="false">
-                                탭내용1
-                            </div>
-                            <!-- e: 제목1 -->
-                            <!-- s: 제목2 -->
-                            <div id="tabContent02" class="tab-content" role="tabpanel" aria-labelledby="tabNav02" aria-hidden="true" hidden>
-                                탭내용2
-                            </div>
-                            <!-- e: 제목2 -->
-                        </div>
-
 						<div class="form_item">
 							<div class="form_label">
 								<label for="">계약자</label>
@@ -108,11 +147,11 @@
 
         <!-- Footer -->
         <footer id="footer">
-			<button type="button" class="btn btn-type2 btn-block"><span>이전</span></button>
-			<button type="button" class="btn btn-type1 btn-block" disabled><span>다음</span></button>
+			<button type="button" class="btn-type2 btn-block"><span>이전</span></button>
+			<button type="button" class="btn-type1 btn-block"><span>다음</span></button>
         </footer>
+        <!-- //Footer -->
 	</div>
-    <!-- //Footer -->
 
     <!-- Modal Basic-->
     <div id="bankSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
@@ -186,6 +225,107 @@
                                     <span class="form-radio txt_left">
                                         <input type="radio" name="sRdio01" id="sRadio18" value="" />
                                         <label for="sRadio18">산업은행</label>
+                                    </span>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+				</div>
+			</div>
+		</div>
+    </div><!-- 은행선택 -->
+    <!-- //Modal -->
+
+    
+
+    <!-- Modal Basic-->
+    <div id="monthSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
+        <div class="popup popup-basic">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">할부기간을 선택해 주세요</h3>
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기" onclick="ui.popup.close('monthSelect')"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+                    <div class="item_list">
+                        <ul>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="dRdio01" id="dRadio11" value="" checked />
+                                        <label for="dRadio11">일시불</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="dRdio01" id="dRadio12" value="" />
+                                        <label for="dRadio12">2개월</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="dRdio01" id="dRadio13" value="" />
+                                        <label for="dRadio13">3개월</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="dRdio01" id="dRadio14" value="" />
+                                        <label for="dRadio14">4개월</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="dRdio01" id="dRadio15" value="" />
+                                        <label for="dRadio15">5개월</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="dRdio01" id="dRadio16" value="" />
+                                        <label for="dRadio16">6개월</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="dRdio01" id="dRadio17" value="" />
+                                        <label for="dRadio17">7개월</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="dRdio01" id="dRadio18" value="" />
+                                        <label for="dRadio18">8개월</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="dRdio01" id="dRadio19" value="" />
+                                        <label for="dRadio19">9개월</label>
+                                    </span>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="form_item align_r">
+                                    <span class="form-radio txt_left">
+                                        <input type="radio" name="dRdio01" id="dRadio20" value="" />
+                                        <label for="dRadio20">10개월</label>
                                     </span>
                                 </div>
                             </li>

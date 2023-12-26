@@ -266,8 +266,10 @@ body {
   align-items: center;
 }
 #wrapper #container .cotents_wrap .cotent_body .card.card_basic.basic_info .card_body.sign_wrap .disabled_ment {
+  position: absolute;
+  z-index: -1;
   font: 600 32px/30px "HGM";
-  color: #EAEAEA;
+  color: #bcbcbc;
 }
 #wrapper #container .cotents_wrap .cotent_body .card.card_basic.basic_info .card_body .list.style-10 {
   display: flex;
@@ -613,7 +615,14 @@ body {
   width: 40px;
   height: 40px;
 }
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .btn_select {
+  width: 100%;
+  right: -8px;
+}
 #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap .arw-toggle {
+  position: absolute;
+  right: 10px;
+  top: 12px;
   width: 16px;
   height: 16px;
   background: url("../images/combo_down.svg") no-repeat center center;
@@ -658,6 +667,13 @@ body {
   font: 400 14px/24px "HML";
   color: #003070;
 }
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap.col4 {
+  display: flex;
+  margin: 0 -5px;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item .form_wrap.col4 * {
+  margin: 0 5px;
+}
 #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap {
   display: flex;
 }
@@ -666,8 +682,8 @@ body {
   width: 30%;
 }
 #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap .num_select .btn_select {
-  width: 25px;
-  right: 10px;
+  width: 100%;
+  right: 0;
 }
 #wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.col2 .form_wrap .num_select .text_label {
   display: block;
@@ -686,6 +702,42 @@ body {
   width: 6px;
   height: 1px;
   background-color: #333;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .tab_wrap {
+  margin-bottom: 30px;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .tab_wrap .tab-body .tab-content {
+  padding: 0;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .tab_wrap .tab-nav.tab-basic {
+  margin-top: 30px;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .tab_wrap .tab-nav.tab-basic ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+  background: #F5F1EE;
+  border: none;
+  margin-top: 10px;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .tab_wrap .tab-nav.tab-basic ul li {
+  width: 50%;
+  position: relative;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .tab_wrap .tab-nav.tab-basic ul li a {
+  background-color: transparent;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .tab_wrap .tab-nav.tab-basic ul li a span {
+  font: 400 16px "HML";
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .tab_wrap .tab-nav.tab-basic ul li.is-selected a {
+  border-radius: 10px;
+  background: #fff;
+  border: 1px solid #F18D00;
+}
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .tab_wrap .tab-nav.tab-basic ul li.is-selected a span {
+  color: #F18D00;
 }
 #wrapper #container .cotents_wrap .cotent_body .info_check {
   display: flex;

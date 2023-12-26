@@ -58,7 +58,7 @@
                                 보험계약 체결 당시
                                 <span>
                                     <input type="text" name="" id="" value="" placeholder="직업" class="form-text is-focused" style="width:60px;" />
-                                    <span class="tooltip">입력 해 주세요</span>
+                                    <span class="tooltip">입력해 주세요!</span>
                                 </span> 
                                 또는
                                 <span>
@@ -161,7 +161,7 @@
                                 <label for="">휴대전화</label>  <button type="button"><img src="../images/ico_reset.svg" alt=""></button>
                             </div>
                             <div class="form_wrap">
-                                <input type="text" id="" name="" oninput="phoneAutoHyphen(this)" maxlength="13" class="form-input" placeholder="휴대전화번호를 입력해주세요." TextField(keyboardType: TextInputType.number, controller: val1, inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9]'))],) />
+                                <input type="text" id="" name="" oninput="phoneAutoHyphen(this)" maxlength="13" class="form-input" placeholder="숫자만 입력" numberonly />
                                 <button type="button" class="btn_select"><i class="arw arw-close txt_close"></i></button>
                             </div>
                         </div>

@@ -20,7 +20,7 @@
 		<!-- HEADER -->
     	<header id="header">
 			<h1><img src="../images/g62.svg" class="ico_logo" alt="H" /></h1>
-			<h2>보험료결제</h2>
+			<h2>보험금 지급</h2>
 			<p><img src="../images/ico_chat.svg" alt="" /></p>
 		</header>
         <!-- //HEADER -->
@@ -30,7 +30,7 @@
 			<div class="cotents_wrap">
 				<div class="cotent_heder">
 					<div class="step_box">
-						<p>보험료 결제 정보를 입력해주세요.</p>
+						<p>보험금 지급 정보를 입력해주세요.</p>
 						<ul>
 							<li><span class="pointer">1</span></li>
 							<li><span class="pointer">2</span></li>
@@ -55,8 +55,8 @@
 								<label for="">계좌번호 입력</label>
 							</div>
 							<div class="form_wrap">
-								<input type="text" id="" name="" class="form-input" placeholder="숫자만 입력해주세요" />
-								<button type="button" class="btn_select"><i class="arw arw-close"></i></button>
+								<input type="text" id="" name="" class="form-input" placeholder="숫자만 입력해주세요" numberOnly />
+								<button type="button" class="btn_clear"><i class="arw arw-close"></i></button>
 							</div>
 						</div>
 						<div class="form_item">
@@ -111,7 +111,7 @@
 				</div>
                 <div class="popup-foot">
                     <button type="button" class="btn btn-type2 btn-block" onclick="ui.popup.close('popupSelect')"><span>아니오</span></button>
-                    <button type="button" class="btn btn-type2 btn-primary btn-block"><span>네</span></button>
+                    <button type="button" class="btn btn-type2 btn-primary btn-block" onclick="ui.popup.close('popupSelect')"><span>네</span></button>
                 </div>
 			</div>
 		</div>
