@@ -1,13 +1,12 @@
 @charset "utf-8";
 
-@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap');
 
 /* ----------------------------------------------
 	초기화
 ---------------------------------------------- */
 html {overflow-y:scroll; width:100%; height:100%}
-body, pre {font-family:'나눔고딕',NanumGothic,'Nanum Gothic'; font-size:12px; line-height:1.5; color:#222;/*font-weight:bold;*/}
-body, div, p, ul, ol, li, dl, dt, dd, table, th, td, h1, h2, h3, h4, h5, h6, address, blockquote, pre {margin:0; padding:0}
+body, div, p, ul, ol, li, dl, dt, dd, table, th, td, h1, h2, h3, h4, h5, h6, address, blockquote, pre {font-family:"Noto Sans KR", "Dotum", "Dotumche", "돋움", "돋움체", "Arial", "Lato", "Helvetica Neue", "Verdana", sans-serif; font-size:12px; line-height:1.5; color:#222; margin:0; padding:0}
 h1 {text-align:center; font-size:36px; margin:0 0 30px 0; color:#333}
 h2 {display:none}
 h3 {margin:25px 0 10px; padding:8px 0 8px 10px; background:#375f91; font-size:14px; line-height:1; color:#fff}

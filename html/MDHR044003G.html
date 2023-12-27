@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<title>현대해상</title>
+<link type="text/css" rel="stylesheet" href="../css/import.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/import.js"></script>
+
+<script type="text/javascript">
+	if (window.addEventListener) {
+		window.addEventListener('load', InitEvent, false);
+	}
+	var canvas, context, tool;
+	function InitEvent() {
+		canvas = document.getElementById('drawCanvas');
+		if (!canvas) {
+		alert("캔버스 객체를 찾을 수 없음");
+		return;
+		}
+		if (!canvas.getContext) {
+		alert("Drawing Contextf를 찾을 수 없음");
+		return;
+		}
+		context = canvas.getContext('2d');
+		if (!context) {
+		alert("getContext() 함수를 호출 할 수 없음");
+		return;
+		}
+		// Pencil tool 객체를 생성 한다.
+		tool = new tool_pencil();
+		canvas.addEventListener('mousedown', ev_canvas, false);
+		canvas.addEventListener('mousemove', ev_canvas, false);
+		canvas.addEventListener('mouseup', ev_canvas, false);
+		canvas.addEventListener('touchstart', ev_canvas, false);
+		canvas.addEventListener('touchmove', ev_canvas, false);
+		canvas.addEventListener('touchend', ev_canvas, false);
+	}
+	function tool_pencil() {
+		var tool = this;
+		this.started = false;
+	
+		// 마우스를 누르는 순간 그리기 작업을 시작 한다. 
+		this.mousedown = function (ev) {
+		context.beginPath();
+		context.moveTo(ev._x, ev._y);
+		tool.started = true;
+		};
+		// 마우스가 이동하는 동안 계속 호출하여 Canvas에 Line을 그려 나간다
+		this.mousemove = function (ev) {
+		if (tool.started) {
+			context.lineTo(ev._x, ev._y);
+			context.stroke();
+		}
+		};
+		// 마우스 떼면 그리기 작업을 중단한다
+		this.mouseup = function (ev) {
+		if (tool.started) {
+			tool.mousemove(ev);
+			tool.started = false;
+		}
+		};
+	
+		// 마우스를 누르는 순간 그리기 작업을 시작 한다. 
+		this.touchstart = function (ev) {
+		context.beginPath();
+		context.moveTo(ev._x, ev._y);
+		tool.started = true;
+		};
+		// 마우스가 이동하는 동안 계속 호출하여 Canvas에 Line을 그려 나간다
+		this.touchmove = function (ev) {
+		if (tool.started) {
+			context.lineTo(ev._x, ev._y);
+			context.stroke();
+			ev.preventDefault();
+		}
+		};
+		// 마우스 떼면 그리기 작업을 중단한다
+		this.touchend = function (ev) {
+		if (tool.started) {
+			tool.touchmove(ev);
+			tool.started = false;
+		}
+		};
+	}
+	// Canvas요소 내의 좌표를 결정 한다.
+	function ev_canvas(ev) {
+		if (ev.layerX || ev.layerX == 0) { // Firefox 브라우저
+		ev._x = ev.layerX;
+		ev._y = ev.layerY;
+		}
+		else if (ev.offsetX || ev.offsetX == 0) { // Opera 브라우저
+		ev._x = ev.offsetX;
+		ev._y = ev.offsetY;
+		}
+		else if (ev.targetTouches[0] || ev.targetTouches[0].pageX == 0) {	//핸드폰
+		var left = 0;
+		var top = 0;
+		var elem = document.getElementById('drawCanvas');
+	
+		while (elem) {
+			left = left + parseInt(elem.offsetLeft);
+			top = top + parseInt(elem.offsetTop);
+			elem = elem.offsetParent;
+		}
+	
+		ev._x = ev.targetTouches[0].pageX - left;
+		ev._y = ev.targetTouches[0].pageY - top;
+		}
+		// tool의 이벤트 핸들러를 호출한다.
+		var func = tool[ev.type];
+		if (func) {
+		func(ev);
+		}
+	}
+	
+	function onClear() {
+		canvas = document.getElementById('drawCanvas');
+		context.save();
+		context.setTransform(1, 0, 0, 1, 0, 0);
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		context.restore();
+	}
+</script>
+</head>
+<body>
+	<div id="wrapper" class="comm_wrap">
+		<!-- HEADER -->
+    	<header id="header">
+			<h1><img src="../images/g62.svg" class="ico_logo" alt="H" /></h1>
+			<h2>전자서명</h2>
+			<p><img src="../images/ico_chat.svg" alt="" /></p>
+		</header>
+        <!-- //HEADER -->
+
+		<!-- Container -->
+		<section id="container">
+			<div class="cotents_wrap">
+				<div class="cotent_heder">
+					<div class="step_box">
+						<p>자필서명을 해주세요.</p>
+						<ul>
+							<li><span class="pointer">1</span></li>
+							<li><span class="pointer">2</span></li>
+							<li><span class="pointer">3</span></li>
+							<li><span class="pointer">4</span></li>
+							<li><span class="pointer is-active">5</span></li>
+						</ul>
+					</div><!-- //계약단계 Step 표시 -->
+					<p class="title_disc"><span class="underline_hl">선지급보증환수동의</span>를 위해 <br>자필서명해 주세요.</p>
+				</div>
+				<div class="cotent_body">
+					<div class="card card_basic basic_info margin-t30">
+						<div class="card_header jc-center">
+							<h3 class="basic_title_h3">성명(NAME)</h3>
+						</div>
+						<div class="card_body position-r sign_wrap" style="min-height:180px;">
+                            <p class="disabled_ment">김현대</p>
+                            <canvas id="drawCanvas"></canvas>
+							<!-- <span class="abs_reset"><button type="button" class="btn btn-type4"><span><img src="../images/ico_reset02.svg" alt="" /> 초기화</span></button></span> -->
+                        </div>
+					</div>
+					<div class="card card_basic basic_info margin-t24">
+						<div class="card_header jc-center">
+							<h3 class="basic_title_h3">서명(SIGN)</h3>
+						</div>
+						<div class="card_body position-r sign_wrap" style="min-height:180px;">							
+                            <p class="disabled_ment">서명해 주세요</p>
+                            <canvas id="drawCanvas"></canvas>
+                            <span class="abs_reset"><button type="button" class="btn btn-type4" disabled><span><img src="../images/ico_reset02.svg" alt="" /> 초기화</span></button></span>
+                        </div>
+					</div>
+
+                    
+					<div class="card card_info card_info02 margin-t20">
+						<div class="card_body sign_info">
+                            <h4 cl>휴대폰 전자서명</h4>
+                            <ul class="list_type01">
+                                <li>1. 계약자명 : 김현대</li>
+                                <li>2. 계약 내용 : 선지급보증환수동의서</li>
+                                <li>3. 계약 시작일 : 2023년 11월 20일</li>
+                                <li>4. 계약 서명일 : 2023년 11월 20일</li>
+                            </ul>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- //Container -->
+
+        <!-- Footer -->
+        <footer id="footer">
+			<button type="button" class="btn btn-type2 btn-block"><span>이전</span></button>
+			<button type="button" class="btn btn-type1 btn-primary btn-block" onclick="ui.popup.open('popupSelect', this);"><span>다음</span></button>
+        </footer>
+	</div>
+    <!-- //Footer -->
+
+    <!-- Modal Basic-->
+    <div id="popupSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
+        <div class="popup popup-basic">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">전자서명 유의사항 확인</h3>                    
+			        <button type="button" class="btn-ico popup-close" aria-controls="popupSelect" onclick="ui.popup.close('popupSelect')" title="제목 팝업닫기"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+					<div class="card card_info card_info02 margin-t20">
+						<div class="form_item align_r">
+                            <span class="form-check txt_left">
+                                <input type="checkbox" name="" id="sCheck11" value="" checked />
+                                <label for="sCheck11">아래 내용에 동의합니다.</label>
+                            </span>
+                        </div>
+					</div>
+                    <p class="desc01">현대해상 보험설계사·보험대리점 위탁 계약사항에 대해 이해하였음을 휴대폰 전자서명으로 자필서명 합니다.</p>
+                    <p class="box_desc desc01 margin-b10">다음 전자서명을 위해 <br> 수수료지급기준에 관한 부속약정서가 조회됩니다</p>
+				</div>
+                <div class="popup-foot">
+                    <button type="button" class="btn btn-type2 btn-primary btn-block"><span>서명전송</span></button>
+                </div>
+			</div>
+		</div>
+    </div>
+    <!-- //Modal -->
+</body>
+</html>
+

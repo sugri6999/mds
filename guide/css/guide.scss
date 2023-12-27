@@ -1,0 +1,43 @@
+@charset "UTF-8";
+/*-------------------------------------------------------------------
+    파일정의 :Guide
+	작성날짜 :2023-11-29 지성만
+	참고사항 :기본값을 정의해서 의미에 적용하고, 의미를 스타일에 활용하여 가이드화 한다.
+    분류순서 :기본정책 > 유틸리티 > 사용자정의(컬러, 폰트, 보더, 간격 등)
+    속성순서 :표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
+-------------------------------------------------------------------*/
+
+/* 라이브러리 _ 컬러 */
+.coler_set {
+    display:flex; align-items:flex-start; flex-wrap:wrap;
+    > div {display:flex; padding:20px; flex-direction:column; align-items:center; gap:80px; min-width:114px}
+}
+
+.color_black {background-color:#020202; border:1px solid #020202}
+.color_white {background-color:#fff; border:1px solid #EDEDED}
+.color_gray10 {background-color:#191919}
+.color_gray09 {background-color:#333}
+.color_gray08 {background-color:#555}
+.color_gray07 {background-color:#777}
+.color_gray06 {background-color:#999}
+.color_gray05 {background-color:#CDCDCD}
+.color_gray04 {background-color:#DBDBDB}
+.color_gray03 {background-color:#EAEAEA}
+.color_gray02 {background-color:#EDEDED}
+.color_gray01 {background-color:#FDFDFD}
+.color_orange08 {background-color:#EB6000}
+.color_orange07 {background-color:#EC6C00}
+.color_orange06 {background-color:#EE7700}
+.color_orange05 {background-color:#F18D00}
+.color_orange04 {background-color:#F3981C}
+.color_orange03 {background-color:#F4A22C}
+.color_orange02 {background-color:#F6AC3B}
+.color_orange01 {background-color:#F9C158}
+
+.color_black *,
+.color_gray06 *,
+.color_gray07 *,
+.color_gray08 *,
+.color_gray09 *,
+.color_gray10 *,
+.font_white * {color:#fff}

@@ -9,7 +9,7 @@ var ui = {
 		if ($('.gnb-dropdown').length)		{this.gnb_dropdown.init();}		// #Gnb Dropdown
 		if ($('.gnb-fulldown').length)		{this.gnb_fulldown.init();}		// #Gnb Fulldown
 		if ($('.tab-nav').length)			{this.tab.init();}				// #Tab
-		if ($('.acco').length)				{this.acco.init();}				// #acco
+		if ($('.accordion').length)			{this.accordion.init();}		// #Accordion
 		if ($('[data-role=fold]').length)	{this.foldToggle.init();}		// #Folder (접기)
 		if ($('[data-role=more]').length)	{this.moreToggle.init();}		// #FolderMore (더보기)
 		if ($('.tooltip').length)			{this.tooltip.init();}			// #Tooltip
@@ -206,61 +206,63 @@ var ui = {
 		참고경로: modules/modules_acco.html
 		참고메뉴: 대메뉴 > 중메뉴 > 소메뉴 > 화면명
 	*/
-	acco : {
-		eleModule: '.acco',
-		eleItem: '.acco-item',
-		eleButton: '.acco-toggle',
-		eleTitle: '.acco-title',
-		eleContent: '.acco-cont',
-		duration: 300,
-		init: function(){
+	accordion : {
+		eleModule : '.accordion',
+		eleButton : '.accordion-toggle',
+		eleTitle : '.accordion-title',
+		eleContent : '.accordion-content',
+		clsActive : 'is-active',
+		duration : 300,
+		init : function(){
 			this.reset();
 			this.disable();
 			this.event($(this.eleButton));
 		},
-		reset: function(){
+		reset : function(){
 			var _this = this;
-			$('.acco-basic').each(function(){$(this).attr({'data-sync':'true', 'data-toggle':'true' })});
+			$('.accordion-basic' ).each(function(){$(this).attr({'data-sync':'true', 'data-toggle':'true' })});
+			$('.accordion-basic2').each(function(){$(this).attr({'data-sync':'true', 'data-toggle':'false'})});
+			$('.accordion-basic3').each(function(){$(this).attr({'data-sync':'false', 'data-toggle':'true'})});
+			$('.accordion-basic5').each(function(){$(this).attr({'data-sync':'false', 'data-toggle':'true'})});
 		},
-		event: function($this){
+		event : function($this){
 			var _this = this;
-			$this.not('.is-clicked, [disabled]').on('click', function(){
-				_this.action($(this).attr('aria-controls')); return false;
-			}).addClass('is-clicked');
+			$this.not('.is-evented, [disabled]').on('click', function(){
+				_this.action($(this).attr('href')); return false;
+			}).addClass('is-evented');
 		},
-		action: function(id){
-			var _this = this,
-				$content = $('#'+id),
-				$toggle = $('[aria-controls'+id+']'),
-				$module = $content.closest(this.eleModule),
-				$Item  = $content.closest(this.eleItem);
-				console.log(id, $('#'+id), !$Item.hasClass('is-active'));
+		action : function(id){
+			var $toggle = $(this.eleButton+'[href="'+id+'"]'),
+				$title = $toggle.closest(this.eleTitle),
+				$module = $toggle.closest(this.eleModule),
+				$content = $(id),
+				clsActive = this.clsActive;
 
 			// Toggle 접기
-			if ($module.attr('data-toggle') == 'true' && $Item.hasClass('is-active')){
-				$Item.removeClass('is-active').find(_this.eleButton).attr('aria-expanded','false');
-				$(this).attr('aria-hidden', 'true');
-				$content.stop().slideUp(this.duration);
-				console.log('Accordion Toggle');
+			if ($module.attr('data-toggle') == 'true' && $content.hasClass(clsActive)){
+				$title.removeClass(clsActive);
+				$toggle.attr('aria-expanded','false');
+				$content.stop().slideUp(this.duration, function(){$(this).removeClass(clsActive).attr('aria-hidden', 'true')});
 			}
 			// Syncroize 펼치기
-			else if ($module.attr('data-sync') == 'true' && !$Item.hasClass('is-active')){
-				$Item.addClass('is-active').find(_this.eleButton).attr('aria-expanded','true');
-				$Item.find(this.eleContent).stop().slideDown(this.duration);
-				$Item.siblings().removeClass('is-active').find(_this.eleButton).attr('aria-expanded','false');
-				$Item.siblings().find(this.eleContent).stop().slideUp(this.duration);
-				console.log('Syncroize Toggle');
+			else if ($module.attr('data-sync') == 'true' && !$content.hasClass(clsActive)){
+				$title.addClass(clsActive).find(this.eleButton).attr('aria-expanded','true');
+				$title.siblings(this.eleTitle).removeClass(clsActive).find(this.eleButton).attr('aria-expanded','false');
+				$content.stop().slideDown(this.duration, function(){$(this).addClass(clsActive).attr('aria-hidden', 'false')});
+				$content.siblings(this.eleContent).stop().slideUp(this.duration, function(){$(this).removeClass(clsActive).attr('aria-hidden', 'true')});
 			}
 			// Default 펼치기
-			else if ($module.attr('data-sync') == 'false' && !$Item.hasClass('is-active')){
-				$Item.addClass('is-active').find(_this.eleButton).attr('aria-expanded','true');
-				$(this).attr('aria-hidden', 'false');
-				$Item.find(this.eleContent).stop().slideDown(this.duration);
-				console.log('Default Toggle');
+			else if ($module.attr('data-sync') == 'false' && !$content.hasClass(clsActive)){
+				$title.addClass(clsActive).find(this.eleButton).attr('aria-expanded','true');
+				$content.stop().slideDown(this.duration, function(){$(this).addClass(clsActive).attr('aria-hidden', 'false')});
+			}
+			// 토글이 아니면 생성된 aria-expanded 속성삭제
+			if ($module.attr('data-toggle') == 'false' && $toggle.attr('aria-expanded') == 'true'){
+				$toggle.removeAttr('aria-expanded');
 			}
 			this.disable();
 		},
-		disable: function(){
+		disable : function(){
 			$(this.eleButton+'[disabled]').each(function(){
 				 $(this).removeAttr('aria-expanded');
 				 $(this).attr('aria-disabled', 'true');
@@ -690,48 +692,48 @@ $(document).ready(function(){
 	// });
 
 	/* input 텍스트 clear */
-	// $('.form_wrap').each(function(){
-	// 	$(this).find('.form-input').on('keyup focus', function(){
-	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+	$('.form_wrap').each(function(){
+		$(this).find('.form-input').on('keyup focus', function(){
+			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
 		
-	// 		if($(this).val().length == 0){
-	// 			$(this).siblings('.btn_clear').attr('style', 'visibility: hidden');
-	// 		} else {
-	// 			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
-	// 		}
-	// 	});
+			if($(this).val().length == 0){
+				$(this).siblings('.btn_clear').attr('style', 'visibility: hidden');
+			} else {
+				$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+			}
+		});
 	
-	// 	$(this).find('.form-input').on('blur', function(){
-	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: hidden');
-	// 	});
+		$(this).find('.form-input').on('blur', function(){
+			$(this).siblings('.btn_clear').attr('style', 'visibility: hidden');
+		});
 	
-	// 	$(this).find('.btn_clear').on('click touchstart', function(){
-	// 		$(this).closest('.form_wrap').find('.form-input').val('');
-	// 		$(this).closest('.form_wrap').find('.btn_clear').attr('style', 'visibility: hidden');
-	// 		return false;
-	// 	});
-	// });
-	// $('.form_wrap').each(function(){
-	// 	$(this).find('.form-input').on('keyup focus', function(){
-	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+		$(this).find('.btn_clear').on('click touchstart', function(){
+			$(this).closest('.form_wrap').find('.form-input').val('');
+			$(this).closest('.form_wrap').find('.btn_clear').attr('style', 'visibility: hidden');
+			return false;
+		});
+	});
+	$('.form_wrap').each(function(){
+		$(this).find('.form-input').on('keyup focus', function(){
+			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
 		
-	// 		if($(this).val().length == 0){
-	// 			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
-	// 		} else {
-	// 			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
-	// 		}
-	// 	});
+			if($(this).val().length == 0){
+				$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+			} else {
+				$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+			}
+		});
 	
-	// 	$(this).find('.form-input').on('blur', function(){
-	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
-	// 	});
+		$(this).find('.form-input').on('blur', function(){
+			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+		});
 	
-	// 	$(this).find('.btn_clear').on('click touchstart', function(){
-	// 		$(this).closest('.form_wrap').find('.form-input').val('');
-	// 		$(this).closest('.form_wrap').find('.btn_clear').attr('style', 'visibility: visible');
-	// 		return false;
-	// 	});
-	// });
+		$(this).find('.btn_clear').on('click touchstart', function(){
+			$(this).closest('.form_wrap').find('.form-input').val('');
+			$(this).closest('.form_wrap').find('.btn_clear').attr('style', 'visibility: visible');
+			return false;
+		});
+	});
 	
 	$("#datenumber").keyup(function() {
 		var replace_text = $(this).val().replace(/[^-0-9]/g, '');

@@ -127,6 +127,9 @@ body {
   background-color: rgba(255, 255, 255, 0.7);
   box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.08);
 }
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 {
+  padding-top: 8px;
+}
 #wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 > dt {
   display: flex;
   justify-content: space-between;
@@ -154,6 +157,10 @@ body {
   color: #D11B19;
   vertical-align: 0.1em;
   margin-right: 4px;
+}
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 > dt > a {
+  font: 400 16px/22px "HMR";
+  width: 100%;
 }
 #wrapper #container .cotents_wrap .cotent_body .card.card_shadow .style-1 > dt .form-check {
   margin: 0;
@@ -187,9 +194,11 @@ body {
   color: #333;
 }
 #wrapper #container .cotents_wrap .cotent_body .card.card_shadow .accordion-title {
-  background-color: #fff;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+#wrapper #container .cotents_wrap .cotent_body .card.card_shadow .accordion-title.is-active {
+  background-color: #fff;
 }
 #wrapper #container .cotents_wrap .cotent_body .card .basic_mlr0 .card_basic {
   padding: 8px 0;
@@ -703,6 +712,9 @@ body {
   height: 1px;
   background-color: #333;
 }
+#wrapper #container .cotents_wrap .cotent_body .pay_wrap .form_item.disabled {
+  opacity: 0.65;
+}
 #wrapper #container .cotents_wrap .cotent_body .pay_wrap .tab_wrap {
   margin-bottom: 30px;
 }
@@ -865,7 +877,6 @@ body {
   bottom: 84px;
   left: 24px;
   right: 24px;
-  width: 327px;
   padding: 12px 16px;
   justify-content: space-between;
   align-items: flex-start;
@@ -1113,7 +1124,6 @@ body {
   right: -7px;
 }
 .accordion-basic5.card_bgwrap .card_shadow dl .accordion-title {
-  background: var(--hi-black-white-white, #FFF);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
 }
@@ -1136,18 +1146,14 @@ body {
   line-height: 18px;
 }
 .accordion-basic5 dl .accordion-title .accordion-label .arw-toggle {
-  right: 5px;
-  top: 7px;
-  width: 9px;
-  height: 9px;
+  right: 0;
+  top: 8px;
+  width: 20px;
+  height: 20px;
   background: none;
-  border-left: 2px solid #191919;
-  border-bottom: 2px solid #191919;
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-  -moz-transform: rotate(135deg);
-  -ms-transform: rotate(135deg);
-  -o-transform: rotate(135deg);
+  background: url("../images/icon_acco.svg") no-repeat center center;
+  transition: all 0.3s;
+  transform: translateY(-50%) rotate(180deg);
 }
 .accordion-basic5 dl .accordion-title .abs_check {
   position: absolute;
@@ -1163,6 +1169,9 @@ body {
 }
 .accordion-basic5 dl .accordion-title p.align-r {
   margin: 5px 0 -5px;
+}
+.accordion-basic5 dl .accordion-title.is-active .accordion-label .arw-toggle {
+  transform: translateY(-50%) rotate(0);
 }
 .accordion-basic5 dl .accordion-content ol li {
   position: relative;
