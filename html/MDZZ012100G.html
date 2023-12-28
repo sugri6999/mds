@@ -45,7 +45,7 @@
                                     <span class="text_label"><input type="text" id="" name="" class="form-input" value="010" disabled /></span> 
                                     <button type="button" class="btn_select" onclick="ui.popup.open('daySelect', this);"><i class="arw arw-toggle"></i></button>
                                 </div>
-                                <span class="type_t"><input type="text" id="" name="" oninput="autoHyphen(this)" maxlength="9" class="form-input" value="1234-6789" TextField(keyboardType: TextInputType.number, controller: val1, inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9]'))],) /></span>
+                                <span class="type_t"><input type="text" id="" name="" oninput="autoHyphen(this)" maxlength="9" class="form-input" value="1234-6789" /></span>
                             </div>
                         </div>
                         <div class="form_item">
@@ -54,7 +54,7 @@
                             </div>
                             <div class="form_wrap">
                                 <form>
-                                    <input type="text" id="" name="dateControll" class="form-input" onkeyup="this.value = date_mask(this.value)" maxlength="10" value="1980.12.12" TextField(keyboardType: TextInputType.number, controller: val1, inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9]'))],) />
+                                    <input type="text" id="" name="dateControll" class="form-input" onkeyup="this.value = date_mask(this.value)" maxlength="10" value="1980.12.12" />
                                     <button type="reset" class="btn_clear" onclick="clearInput()"><i class="arw arw-close"></i></button>
                                 </form>
                             </div>

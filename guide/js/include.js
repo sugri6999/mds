@@ -23,6 +23,7 @@ var include = {
 	head : function(){
 		document.write('<!-- Front -->');
 		document.write('<link href="'+gRootURL.root+'css/import.css" rel="stylesheet" />');
+		document.write('<link href="'+gRootURL.root+'css/style.css" rel="stylesheet" />');
 		document.write('<link href="'+gRootURL.root+'css/lib/font-awesome.min.css" rel="stylesheet" />');
 		document.write('<script src="'+gRootURL.root+'js/lib/jquery-3.3.1.min.js"></script>');
 		document.write('<script src="'+gRootURL.root+'js/import_g.js"></script>');
@@ -145,6 +146,9 @@ var include = {
 			document.write('							<dd id="accorMenu11" class="accordion-content" aria-hidden="false">');
 			document.write('								<ul class="g-depth2">');
 			document.write('									<li class="g-node2"><a href="'+baseURL+'elements_color.html">Color</a></li>');
+			document.write('									<li class="g-node2"><a href="'+baseURL+'elements_typo.html">Typography</a></li>');
+			document.write('									<li class="g-node2"><a href="'+baseURL+'elements_app.html">App Bar</a></li>');
+			document.write('									<li class="g-node2"><a href="'+baseURL+'elements_input.html">Text Input Field</a></li>');
 			document.write('								</ul>');
 			document.write('							</dd>');
 			document.write('							<dt class="accordion-title">');

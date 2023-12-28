@@ -771,6 +771,12 @@ $(document).ready(function(){
 		$(this).val($(this).val().replace(/[^0-9]/g,""));
 	});
 	
+	// 박스라인 활성화
+	$(".item_divider").click(function(){
+		$(this).toggleClass("is-active");
+		$(this).siblings().removeClass("is-active");
+	})
+	
 
 
 

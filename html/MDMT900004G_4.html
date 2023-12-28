@@ -46,55 +46,37 @@
                                     <div id="tabContent01" class="tab-content" role="tabpanel" aria-labelledby="tabNav01" aria-hidden="true" hidden>
                                         <div class="form_item">
                                             <div class="form_label">
-                                                <label for="">계좌번호 입력</label>
-                                            </div>
-                                            <div class="form_wrap">
-                                                <input type="text" id="" name="" class="form-input" value="" placeholder="숫자만 입력해주세요." numberonly />
-                                                <button type="button" class="btn_clear"><i class="arw arw-close txt_close"></i></button>
-                                            </div>
-                                        </div>
-                                        <div class="form_item">
-                                            <div class="form_label">
                                                 <label for="">은행선택</label>
                                             </div>
                                             <div class="form_wrap">
-                                                <input type="text" id="" name="" class="form-input" value="우리은행" placeholder="은행을 선택해주세요." disabled />
+                                                <input type="text" id="" name="" class="form-input" value="" placeholder="은행을 선택해주세요." />
                                                 <button type="button" class="btn_select" onclick="ui.popup.open('bankSelect', this);"><i class="arw arw-toggle"></i></button>
                                             </div>
                                         </div>
                                     </div>
                                     <!-- e: 제목1 -->
                                     <!-- s: 제목2 -->
-                                    <div id="tabContent02" class="tab-content" role="tabpanel" aria-labelledby="tabNav02" aria-hidden="true" hidden>
-                                            <div class="form_item">
-                                                <div class="form_label">
-                                                    <label for="">할부기간</label>
-                                                </div>
-                                                <div class="form_wrap">
-                                                    <input type="text" id="" name="" class="form-input" value="" placeholder="일시불" disabled />
-                                                    <button type="button" class="btn_select" onclick="ui.popup.open('monthSelect', this);"><i class="arw arw-toggle"></i></button>
-                                                </div>
+                                    <div id="tabContent02" class="tab-content is-active" role="tabpanel" aria-labelledby="tabNav02" aria-hidden="true">
+                                        <div class="form_item">
+                                            <div class="form_label">
+                                                <label for="">유효기간</label>
                                             </div>
-                                            <div class="form_item">
-                                                <div class="form_label">
-                                                    <label for="">유효기간</label>
-                                                </div>
-                                                <div class="form_wrap">
-                                                    <input type="text" id="" name="" class="form-input" value="2028년12월" placeholder="YYYYMM" />
-                                                    <button type="reset" class="btn_clear" onclick="clearInput()"><i class="arw arw-close"></i></button>
-                                                </div>
+                                            <div class="form_wrap">
+                                                <input type="text" id="" name="" class="form-input" value="" placeholder="YYYYMM" />
+                                                <button type="reset" class="btn_clear" onclick="clearInput()"><i class="arw arw-close"></i></button>
                                             </div>
-                                            <div class="form_item">
-                                                <div class="form_label">
-                                                    <label for="">신용카드번호</label>
-                                                </div>
-                                                <div class="form_wrap col4">
-                                                    <input type="text" id="" name="" class="form-input" value="1234" placeholder="4자리" />
-                                                    <input type="password" id="" name="" class="form-input" value="****" placeholder="4자리" />
-                                                    <input type="password" id="" name="" class="form-input" value="****" placeholder="4자리" />
-                                                    <input type="text" id="" name="" class="form-input" value="567" placeholder="4자리" />
-                                                </div>
+                                        </div>
+                                        <div class="form_item">
+                                            <div class="form_label">
+                                                <label for="">신용카드번호</label>
                                             </div>
+                                            <div class="form_wrap col4">
+                                                <input type="text" id="" name="" class="form-input" value="1234" placeholder="4자리" />
+                                                <input type="password" id="" name="" class="form-input" value="****" placeholder="4자리" />
+                                                <input type="password" id="" name="" class="form-input" value="****" placeholder="4자리" />
+                                                <input type="text" id="" name="" class="form-input" value="567" placeholder="4자리" />
+                                            </div>
+                                        </div>
                                     </div>
                                     <!-- e: 제목2 -->
                                 </div>      
@@ -107,7 +89,7 @@
                                         <li role="none">
                                             <a href="#tabContent01" id="tabNav01" role="tab" aria-controls="tabContent01" aria-selected="false"><span>실시간 계좌이체</span></a>
                                         </li>
-                                        <li role="none">
+                                        <li role="none" class="is-selected">
                                             <a href="#tabContent02" id="tabNav02" role="tab" aria-controls="tabContent02" aria-selected="false"><span>신용카드</span></a>
                                         </li>
                                     </ul>

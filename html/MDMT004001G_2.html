@@ -44,8 +44,8 @@
                                 <label for="">생년월일</label>
                             </div>
                             <div class="form_wrap">
-                                <input type="number" id="" name="" class="form-input" placeholder="예. 19991111" />
-                                <button type="button" class="btn_select"><i class="arw arw-close"></i></button>
+								<input type="text" id="dateControll" name="dateControll" class="form-input" onkeyup="this.value = date_mask(this.value)" maxlength="10" placeholder="예. 1999.11.11" />
+								<button type="reset" class="btn_clear" onclick="clearInput()"><i class="arw arw-close"></i></button>
                             </div>
                         </div>
                     </div>

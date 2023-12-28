@@ -43,7 +43,7 @@
                             <div class="form_wrap is-focused">
                                 <div class="insu_num">
                                     <div class="fild_num">
-                                        <input type="number" id="" name=""  maxlength="6" class="form-input" placeholder="인증번호 6자리" value="" />
+                                        <input type="text" id="" name=""  maxlength="6" class="form-input" placeholder="인증번호 6자리" value="" numberonly />
                                         <em>3:00</em>
                                     </div>
                                     <button type="button" class="btn btn-type3" onclick="ui.popup.open('popupContent', this);"><span>재발송</span></button>
@@ -55,7 +55,7 @@
                                 <label for="">휴대전화번호</label>
                             </div>
                             <div class="form_wrap">
-                                <input type="text" id="" name="" oninput="phoneAutoHyphen(this)" maxlength="13" class="form-input" placeholder="휴대전화번호를 입력해주세요." value="010-1234-6789" TextField(keyboardType: TextInputType.number, controller: val1, inputFormatters: [FilteringTextInputFormatter.allow(RegExp('[0-9]'))],) />
+                                <input type="text" id="" name="" oninput="phoneAutoHyphen(this)" maxlength="13" class="form-input" placeholder="숫자만 입력" value="010-1234-6789" />
                                 <button type="button" class="btn_clear"><i class="arw arw-close txt_close"></i></button>
                             </div>
                         </div>
@@ -73,7 +73,7 @@
                                 <label for="">생년월일</label>
                             </div>
                             <div class="form_wrap">
-                                <input type="text" id="" name="" class="form-input" value="1987.12.12" placeholder="예. 19991111" />
+                                <input type="text" id="" name="" class="form-input" value="1987.12.12" onkeyup="this.value = date_mask(this.value)" maxlength="10" placeholder="예. 1999.11.11" />
                                 <button type="button" class="btn_clear"><i class="arw arw-close"></i></button>
                             </div>
                         </div>
