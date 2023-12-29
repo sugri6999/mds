@@ -121,8 +121,8 @@ body {background:var(--background-bg-01, #F9F7F4);}
                                     dd {font:500 14px 'HGM'; color:#333; text-align:right; line-height:20px}
                                 }
                                 &.sign_wrap {
-                                    display:flex; justify-content:center; align-items:center;
-                                    .disabled_ment {position:absolute; z-index:-1; font:600 32px/30px 'HGM'; color:#bcbcbc}
+                                    display:flex; justify-content:center; align-items:center; z-index:1;
+                                    .disabled_ment {position:absolute; font:600 32px/30px 'HGM'; color:#EAEAEA; z-index:-1}
 
                                 }
                                 .list.style-10 {
@@ -375,6 +375,8 @@ body {background:var(--background-bg-01, #F9F7F4);}
                     .app_logo {
                         width:68px;
                         img {border-radius:10px}
+                        &.naver_logo img {box-shadow:0 8px 8px -8px #009e17}
+                        &.kakao_logo img {box-shadow:0 8px 8px -8px #dbbe0c}
                     }
                     .info_txt {margin-top:16px; text-align:center; font:400 18px/28px "HMR"}
                     .info_step {
@@ -411,6 +413,32 @@ body {background:var(--background-bg-01, #F9F7F4);}
                     display:flex; flex-direction:column; align-items:flex-start; gap:16px;
                     * {font:500 14px/20px 'HGM'; color:#555}
                     ul {display:flex; flex-direction:column; align-items:flex-start; gap:6px}
+                }
+
+                .gapillan_area {
+                    margin-top:30px;
+                    li + li {margin-top:12px}
+                    li {
+                        padding:16px 20px; border-radius:10px; background-color:rgba(255, 255, 255, 0.7); font:500 16px/38px "HGM"; color:#555;
+                        h3 {margin:-16px -20px 16px; background-color:rgba(255, 255, 255, 1); border-top-left-radius:10px; border-top-right-radius:10px; padding:6px 0; text-align:center; font:500 12px/18px "HGM"; color:#555}
+                        .self_write {
+                            display:inline-block; position:relative; height:30px; vertical-align:-10px;
+                            .form-text {
+                                position:absolute; top:0px; height:auto; padding:6px 12px; text-align:center; border:1px solid #F1EBE6; font:400 16px "HGL"; color:#333; background-color:rgba(229, 211, 201, .45); border-radius:6px; box-shadow:none; z-index:10;
+                                &:focus {background-color:rgba(246, 144, 0, .75); box-shadow:0 2px 4px 0 rgba(255, 150, 3, 0.24); color:#fff}
+                                &:disabled {background-color:#fff; border:1px solid #CDCDCD; color:#333; font-weight:600; font-family:"HGM"; box-shadow:none}
+                            }
+                            .outline_txt {display:block; text-align:center; font:400 16px "HGL"; color:#3c2424; position:absolute; left:0; right:0; top:0; line-height:30px; z-index:9}
+                            .tooltip {
+                                display:block; position:absolute; left:50%; top:-30px; margin-left:-45px; width:90px; line-height:24px; background-color:#020202; border-radius:6px; font-size:12px; color:#fff; text-align:center; 
+                                &::after {content:""; position:absolute; top:23px; left:38px; width:0; height:0; border-left:7px solid transparent; border-right:7px solid transparent; border-top:10px solid #020202}
+                            }
+                            &.is-focused {
+                                .form-text {background-color:rgba(246, 144, 0, .75); box-shadow:0 2px 4px 0 rgba(255, 150, 3, 0.24)}
+                                .outline_txt {color:#cc6f00}
+                            }
+                        }
+                    }
                 }
             }
 

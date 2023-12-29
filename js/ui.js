@@ -776,6 +776,14 @@ $(document).ready(function(){
 		$(this).toggleClass("is-active");
 		$(this).siblings().removeClass("is-active");
 	})
+
+	
+	
+	// 박스라인 활성화
+	$(".self_write").click(function(){
+		$(this).toggleClass("is-focused");
+		$(this).siblings().removeClass("is-focused");
+	})
 	
 
 
