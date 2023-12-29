@@ -484,7 +484,8 @@ body {background:var(--background-bg-01, #F9F7F4);}
 }
 
 #wrapper.main_wrap {
-    display:flex; flex-direction:column; justify-content:space-between; gap:20px 0; height:100vh; background: var(--warm-gray-scale-ot-02, linear-gradient(0deg, rgba(241, 141, 0, 0.10) 0%, rgba(241, 141, 0, 0.10) 100%), #FFF);
+    display:flex; flex-direction:column; justify-content:space-between; gap:20px 0; height:100vh; background-color:#FFF4E3;
+    &.bg_h {background-image:url('../images/bg_h.svg'); background-repeat:no-repeat; background-size:cover}
     #header {
         h1 {
             display:inline-block; width:auto;
