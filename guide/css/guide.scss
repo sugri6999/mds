@@ -124,5 +124,29 @@
     .card_body {
         display:flex; align-items:flex-start; flex-wrap:wrap; gap:20px;
         > div {width:300px;}
+        .form_wrap .btn_clear {position:absolute; right:-10px; top:0; width:40px; height:40px}
+
+        .col2 {
+            .form_wrap {
+                display:flex;
+                .num_select {
+                    position:relative; width:30%;                                
+                    .btn_select {width:100%; right:0}
+                    .text_label {display:block}
+                }
+                .type_t {
+                    width:70%;
+                    &.hypen {
+                        position:relative;
+                        &::before {content:''; position:absolute; top:20px; right:12px; width:6px; height:1px; background-color:#333}
+                    } 
+                } 
+            }
+        }
+
+        .form_item.is-didabled {
+            .form-input,
+            .form_label label {color:#777}
+        }
     }
 }

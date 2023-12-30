@@ -327,4 +327,44 @@
 }
 .text_field .card_body > div {
   width: 300px;
+}
+.text_field .card_body .form_wrap .btn_clear {
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 40px;
+  height: 40px;
+}
+.text_field .card_body .col2 .form_wrap {
+  display: flex;
+}
+.text_field .card_body .col2 .form_wrap .num_select {
+  position: relative;
+  width: 30%;
+}
+.text_field .card_body .col2 .form_wrap .num_select .btn_select {
+  width: 100%;
+  right: 0;
+}
+.text_field .card_body .col2 .form_wrap .num_select .text_label {
+  display: block;
+}
+.text_field .card_body .col2 .form_wrap .type_t {
+  width: 70%;
+}
+.text_field .card_body .col2 .form_wrap .type_t.hypen {
+  position: relative;
+}
+.text_field .card_body .col2 .form_wrap .type_t.hypen::before {
+  content: "";
+  position: absolute;
+  top: 20px;
+  right: 12px;
+  width: 6px;
+  height: 1px;
+  background-color: #333;
+}
+.text_field .card_body .form_item.is-didabled .form-input,
+.text_field .card_body .form_item.is-didabled .form_label label {
+  color: #777;
 }/*# sourceMappingURL=guide.css.map */
