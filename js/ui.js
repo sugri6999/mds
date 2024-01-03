@@ -785,7 +785,13 @@ $(document).ready(function(){
 		$(this).siblings().removeClass("is-focused");
 	})
 	
-
+	// txtArea 자동높이
+	var txtArea = $(".list_type01");
+    if (txtArea) {
+        txtArea.each(function(){
+            $(this).height(this.scrollHeight);
+        });
+    }
 
 
 });

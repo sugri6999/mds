@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<title>현대해상</title>
+<link type="text/css" rel="stylesheet" href="../css/import.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/import.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="comm_wrap">
+		<!-- HEADER -->
+    	<header id="header">
+			<h1><img src="../images/g62.svg" class="ico_logo" alt="H" /></h1>
+			<h2>약관동의</h2>
+			<p><img src="../images/ico_chat.svg" alt="" /></p>
+		</header>
+        <!-- //HEADER -->
+
+		<!-- Container -->
+		<section id="container">
+			<div class="cotents_wrap">
+				<div class="cotent_heder">
+					<div class="step_box">
+						<p>전자서명을 해주세요.</p>
+						<ul>
+							<li><span class="pointer">1</span></li>
+							<li><span class="pointer is-active">2</span></li>
+							<li><span class="pointer">3</span></li>
+						</ul>
+					</div><!-- //계약단계 Step 표시 -->
+					<p class="title_disc">지문인증 촬영을 <br>진행해 주세요.</p>
+				</div>
+				<div class="cotent_body bio_wrap">
+                    <div class="info_type02">
+                        <p class="bolder">지문인증서명은 현대해상 앱 설치가 필요합니다.</p>
+                        <p>이점 유의하시고, 미설치 고객님께서는 하단의 버튼을 통해 앱 설치를 진행해주세요.</p>
+                    </div>
+                    <div class="app_down">
+                        <button type="button" class="btn-type3"><img src="../images/ico_googlepalay.png" alt="" /> <span>Google Play</span></button>
+			            <button type="button" class="btn-type3"><img src="../images/ico_apple.png" alt="" /> <span>App Store</span></button>
+                    </div>
+                    <div class="bul bul_info txt_info margin-t12">
+                        <p>현대해상 앱 미설치 및 고객님의 스마트폰 환경에 따라 지문촬영이 불가할 수 있습니다.</p>
+                    </div>
+                    <div class="card card_info card_info02 margin-t20">
+						<div class="card_body sign_info">
+                            <h4>지문 촬영 안내사항</h4>
+							<div class="dot_list padding-t10">
+								<ul class="bul bul-dot">
+									<li>스마트폰 후면 카메라로 촬영된 고객님의 지문 정보는 촬영 즉시 암호화되어 현대해상과 금융결제원에 안전하게 분산 보관됩니다.</li>
+									<li>금융결제원 바이오정보 분산관리센터에서 이 계약의 진정성과 보관의 안전성을 보장합니다.</li>
+									<li>올바른 촬영을 위해 다음 화면에서 제공되는 ‘촬영 가이드＇를 반드시 확인 후 진행 부탁드립니다.</li>
+								</ul>
+							</div>
+                        </div>
+					</div>
+				</div>
+			</div>
+		</section> 
+		<!-- //Container -->
+
+        <!-- Footer -->
+        <footer id="footer">
+			<button type="button" class="btn-type2 btn-block"><span>이전</span></button>
+			<button type="button" class="btn-type1 btn-block" onclick="ui.popup.open('popupSelect', this);"><span>다음</span></button>
+        </footer>
+        <!-- //Footer -->
+	</div>
+
+	<!-- Modal Basic-->
+	<div id="popupSelect" class="popup-wrap" data-popup="select" role="dialog" aria-labelledby="popupSelectTitle" hidden>
+		<div class="popup popup-basic">
+			<div class="popup-inner">
+				<div class="popup-head">
+					<h3 id="popupSelectTitle" class="popup-title popup-focus">바이오 (지문)인증 전자서명 안내</h3>                    
+					<button type="button" class="btn-ico popup-close" aria-controls="popupSelect" title="제목 팝업닫기" onclick="ui.popup.close('popupSelect')"><span><i class="arw arw-close">Close</i></span></button>
+				</div>
+				<div class="popup-body">
+					<div class="card card_info card_info02 margin-t20">
+						<div class="form_item align_r">
+							<span class="form-check txt_left">
+								<input type="checkbox" name="" id="pCheck11" value="" checked />
+								<label for="pCheck11">아래 내용에 동의합니다.</label>
+							</span>
+						</div>
+					</div>
+					<p class="desc01">※ 상법 제731조(타인의 사망을 보험사고로 하는 보험계약에서는 보험계약체결시 그 타인의 서면(전자문서를 포함)에 의한 동의를 얻어야 한다) 및 동법 시행령 제44조의 2에 따라, 전자서명한 사람이 보험계약에 동의한 본인임을 지문촬영을 통한 지문정보를 이용하여 확인합니다.</p>
+					<p class="desc01 padding-t0">※ 수집한 지문은 촬영한 휴대폰에 저장되는 사진,이미지가 아닌 특정 정보로 변환 및 암호화 된 데이터로써 금융결제원 가이드라인에 따라 금융결제원과 현대해상이 분산 보관하여 안전하게 관리됩니다.(문의 : 1577-5500)</p>
+				</div>
+				<div class="popup-foot">
+					<button type="button" class="btn btn-type2 btn-primary btn-block"><span>서명전송</span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //Modal -->
+</body>
+</html>
