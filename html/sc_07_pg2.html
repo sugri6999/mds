@@ -21,7 +21,7 @@
     	<header id="header">
 			<h1><img src="../images/g62.svg" class="ico_logo" alt="H" /></h1>
 			<h2>청약서류 확인</h2>
-			<p><img src="../images/ico_chat.svg" alt="" /></p>
+			<p></p>
 		</header>
         <!-- //HEADER -->
 
@@ -126,9 +126,17 @@
 								</p>
 								<p class="box_info">상품설명서 – 위험보장 및 보험금 지급내용</p>
 							</div>
-							<div class="card_foot un_select">
-								<button type="button" class="btn btn-block"><span>아니요</span></button>
-								<button type="button" class="btn btn-block"><span>네</span></button>
+							<div class="card_foot">
+                                <div class="radio-wrap bordered">
+									<input class="hidden radio-label" id="no01" type="radio" name="accept-offers1" />
+									<label class="button-label" for="no01">
+										<span>아니오</span>
+									</label>
+									<input class="hidden radio-label" id="yes01" type="radio" name="accept-offers1" />
+									<label class="button-label" for="yes01">
+										<span>네</span>
+									</label>
+								</div>
 							</div>
 						</div>
 						<div class="card card_basic card_border">
@@ -139,8 +147,16 @@
 								<p class="box_info">상품설명서 – 02 보험계약자 및 피보험자의 권리 <br>●의무 – □ 보험계약자●피보험자의 의무</p>
 							</div>
 							<div class="card_foot">
-								<button type="button" class="btn btn-block is-active"><span>아니요</span></button>
-								<button type="button" class="btn btn-block"><span>네</span></button>
+								<div class="radio-wrap">
+									<input class="hidden radio-label" id="no02" type="radio" name="accept-offers2" />
+									<label class="button-label" for="no02">
+										<span>아니오</span>
+									</label>
+									<input class="hidden radio-label" id="yes02" type="radio" name="accept-offers2" checked />
+									<label class="button-label" for="yes02">
+										<span>네</span>
+									</label>
+								</div>
 							</div>
 						</div>
 						<div class="card card_basic card_border">
@@ -151,8 +167,16 @@
 								<p class="box_info">상품설명서 - 06 기타 유의사항 - □ 해약환급금 <br>관련사항 등</p>
 							</div>
 							<div class="card_foot">
-								<button type="button" class="btn btn-block"><span>아니요 <em>보험료 전액을 환급</em></span></button>
-								<button type="button" class="btn btn-block is-active"><span>네 <em>사업비 등을 차감한 금액 환급</em></span></button>
+								<div class="radio-wrap">
+									<input class="hidden radio-label" id="no03" type="radio" name="accept-offers3" checked />
+									<label class="button-label" for="no03">
+										<span>아니요 <em>보험료 전액을 환급</em></span>
+									</label>
+									<input class="hidden radio-label" id="yes03" type="radio" name="accept-offers3" />
+									<label class="button-label" for="yes03">
+										<span>네 <em>사업비 등을 차감한 금액 환급</em></span>
+									</label>
+								</div>
 							</div>
 						</div>
 					</div>

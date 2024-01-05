@@ -713,27 +713,27 @@ $(document).ready(function(){
 			return false;
 		});
 	});
-	$('.form_wrap').each(function(){
-		$(this).find('.form-input').on('keyup focus', function(){
-			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+	// $('.form_wrap').each(function(){
+	// 	$(this).find('.form-input').on('keyup focus', function(){
+	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
 		
-			if($(this).val().length == 0){
-				$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
-			} else {
-				$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
-			}
-		});
+	// 		if($(this).val().length == 0){
+	// 			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+	// 		} else {
+	// 			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+	// 		}
+	// 	});
 	
-		$(this).find('.form-input').on('blur', function(){
-			$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
-		});
+	// 	$(this).find('.form-input').on('blur', function(){
+	// 		$(this).siblings('.btn_clear').attr('style', 'visibility: visible');
+	// 	});
 	
-		$(this).find('.btn_clear').on('click touchstart', function(){
-			$(this).closest('.form_wrap').find('.form-input').val('');
-			$(this).closest('.form_wrap').find('.btn_clear').attr('style', 'visibility: visible');
-			return false;
-		});
-	});
+	// 	$(this).find('.btn_clear').on('click touchstart', function(){
+	// 		$(this).closest('.form_wrap').find('.form-input').val('');
+	// 		$(this).closest('.form_wrap').find('.btn_clear').attr('style', 'visibility: visible');
+	// 		return false;
+	// 	});
+	// });
 	
 	$("#datenumber").keyup(function() {
 		var replace_text = $(this).val().replace(/[^-0-9]/g, '');
@@ -776,8 +776,6 @@ $(document).ready(function(){
 		$(this).toggleClass("is-active");
 		$(this).siblings().removeClass("is-active");
 	})
-
-	
 	
 	// 박스라인 활성화
 	$(".self_write").click(function(){
@@ -792,6 +790,11 @@ $(document).ready(function(){
             $(this).height(this.scrollHeight);
         });
     }
+
+	//  라디오 버튼 중앙 라인
+	$(".radio-wrap").click(function(){
+		$(this).removeClass("bordered");
+	})
 
 
 });

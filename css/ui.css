@@ -106,33 +106,6 @@ textarea.form-text {height:auto; padding:10px}
 .form-file .upload-thumb-wrap {display:inline-block; width:54px; padding:2px; vertical-align:middle; border:1px solid #ddd; border-radius:5px; background-color:#fff}
 .form-file .upload-display img {display:block; max-width:100%; width:100% \9; height:auto}
 
-/* Form R */
-.radio-wrap {background-color:#F5F1EE; border-radius:10px; display:flex; align-items:center}
-.button-label {height:40px; width:50%; display:flex; align-items:center; justify-content:center}
-.button-label span { font:400 16px "HMR";}
-#yes-button:checked + .button-label,
-#no-button:checked + .button-label {border-radius:10px; background:#fff; border:1px solid #F18D00}
-#yes-button:checked + .button-label span,
-#no-button:checked + .button-label span {color:#F18D00}
-#man-button:checked + .button-label,
-#woman-button:checked + .button-label {border-radius:10px; background:#fff; border:1px solid #F18D00}
-#man-button:checked + .button-label span,
-#women-button:checked + .button-label span {color:#F18D00}
-#in-button:checked + .button-label,
-#out-button:checked + .button-label {border-radius:10px; background:#fff; border:1px solid #F18D00}
-#in-button:checked + .button-label span,
-#out-button:checked + .button-label span {color:#F18D00}
-#day-button + .button-label,
-#week-button + .button-label,
-#month-button + .button-label {border-radius:8px; background:#F5F1EE; border:1px solid #F5F1EE}
-#day-button:checked + .button-label,
-#week-button:checked + .button-label,
-#month-button:checked + .button-label {border-radius:8px; background:#fff; border:1px solid #F18D00}
-#day-button:checked + .button-label span,
-#week-button:checked + .button-label span,
-#month-button:checked + .button-label span {color:#F18D00}
-
-
 /* Basic */
 .form-radio {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle}
 .form-radio label {display:inline-block; position:relative; min-width:20px; min-height:20px; font-size:14px; font-family:'HML'; line-height:18px; vertical-align:middle}
@@ -169,14 +142,14 @@ textarea.form-text {height:auto; padding:10px}
 /* Basic */
 .form-check {display:inline-block; position:relative; margin:5px 0; line-height:1; vertical-align:middle}
 .form-check {display:inline-block}
-.form-check label {display:inline-block; position:relative; min-width:18px; min-height:18px; font-size:14px; line-height:20px}
+.form-check label {display:inline-block; position:relative; min-width:18px; min-height:22px; font-size:14px; line-height:22px}
 .form-check label span {display:inline-block; padding-left:25px}
 .form-check.txt_left label span {padding-right:26px; padding-left:0}
 .form-check label:before {content:''; position:absolute; left:0; top:0}
 .form-check.txt_left label:before,
 .form-radio.txt_left label:before {left:auto; right:0}
-.form-check label:before {top:0; width:18px; height:18px; background:#fff; border-radius:50%}
-.form-check > input {position:absolute; left:3px; top:3px; width:12px; height:12px}
+.form-check label:before {top:2px; width:18px; height:18px; background:#fff; border-radius:50%}
+.form-check > input {position:absolute; left:3px; top:5px; width:12px; height:12px}
 .form-check.txt_left > input,
 .form-radio.txt_left > input {right:3px; left:auto}
 .form-check + .form-check {margin-left:10px}
@@ -920,7 +893,7 @@ button::-moz-focus-inner {border:0px; padding:0px}
 .accordion-basic5 .accordion-title .accordion-toggle[disabled] {color:#999}
 .accordion-basic5 .accordion-title .accordion-toggle .arw-toggle {opacity:0.5}
 /* .accordion-basic5 .accordion-content {padding:10px 20px; background-color:#ffffff} */
-.accordion-basic5 .accordion-content + .accordion-title {border-top:1px solid #ededed}
+.accordion-basic5 .accordion-content + .accordion-title {border-top:1px solid #ededed; border-top-left-radius:0; border-top-right-radius:0}
 /* .accordion-basic5 .is-active.accordion-title {background-color:#f8f8f8} */
 .accordion-basic5 .is-active.accordion-title .accordion-toggle {color:#222}
 .accordion-basic5 .is-active.accordion-title .accordion-toggle .arw-toggle {opacity:1}
