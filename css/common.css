@@ -17,6 +17,7 @@
 /* 모바일접근성 그룹영역 초점처리(IOS대응 호환성처리) */
 /* Body Fixed */
 .is-bodyFixed {position:fixed; left:0; top:0; width:100%; height:100%; overflow:hidden}
+.is-scroll-lock {overflow:hidden}
 /* Device Only */
 .dv-ios-only,
 .dv-and-only,

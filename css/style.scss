@@ -6,20 +6,116 @@
     분류순서 :기본정책 > 유틸리티 > 사용자정의(컬러, 폰트, 보더, 간격 등)
     속성순서 :표시 > 위치 > 넘침/흐름 > 크기/간격 > 박스모양 > 폰트/정렬 > 기타
 -------------------------------------------------------------------*/
-body {background:var(--background-bg-01, #F9F7F4);}
-#wrapper.comm_wrap {    
-    background:var(--background-bg-01, #F9F7F4);
-    #header {position:fixed; left:0; right:0; padding:0 24px; background-color:#F9F7F4; z-index:99}
-    #container {padding-top:62px; padding-bottom:100px}
-    &.main_step {
-        #container {padding:0;}
-    }
-}
+body {background:var(--background-bg-01, #F9F7F4)}
 
 #wrapper {
     height:calc(100% - 0px); padding:0 24px;
+    &.comm_wrap {    
+        background:var(--background-bg-01, #F9F7F4);
+        #header {position:fixed; left:0; right:0; padding:0 24px; background-color:#F9F7F4; z-index:99}
+        #container {padding-top:62px; padding-bottom:100px}
+        &.main_step {
+            height:100vh; background: var(--warm-gray-scale-ot-02, linear-gradient(0deg, rgba(241, 141, 0, 0.10) 0%, rgba(241, 141, 0, 0.10) 100%), #FFF);
+            #header {
+                position:relative; padding:0; background-color:transparent;
+                h1 {
+                    display:inline-block; width:auto;
+                    .ico_logo {width:25px; vertical-align:bottom}
+                    span {display:inline-block; width:85px; margin-left:4px}
+                }
+            }
+        
+            #container {
+                padding:0;
+                .cotents_wrap {
+                    .cotent_heder {
+                        h2 {
+                            font:400 16px/24px "HGM"; letter-spacing:-.32px; color:#000;
+                            span {font:500 16px/24px "HGM"; letter-spacing:-.32px;; color:#000;}
+                        }
+                        .title_disc {margin-top:8px}
+                        
+                    }
+                }
+            }
+        }
+    }
+
+    &.main_wrap {
+        display:flex; flex-direction:column; justify-content:center; height:100vh; background-color:#FFF4E3;
+        &.bg_h {
+            background-image:url('../images/bg_h.svg'); background-repeat:no-repeat; background-size:cover;
+            .chrt_wrap {margin-top:-180px; display:flex; justify-content:center}
+        }
+        #header {
+            h1 {
+                display:inline-block; width:auto;
+                .ico_logo {width:25px; vertical-align:bottom}
+                span {display:inline-block; width:85px; margin-left:4px}
+            }
+        }
+    
+        #container {
+            .main_intro {
+                text-align:center; width:350px; height:320px;
+                // display:flex; flex-direction:column; align-items:center; text-align:center; justify-content:center; position:absolute; top:37%; left:50%; width:350px; height:320px;
+                .main_intro_head {
+                    h2 {font-family:'HMR'; font-size:30px; line-height:42px}
+                    p {
+                        font:500 16px 'HGL'; line-height:24px; padding:0 30px;
+                        span {
+                            position:relative; font-family:'HGM'; font-weight:500;
+                            &::after {content:''; position:absolute; bottom:-3px; left:-1px; right:-1px; height:6px; border-radius:3px; background-color:rgba(241, 141, 0, .25)}
+                        }
+                    }
+                }
+                .main_intro_body {
+                    .main_chrt {
+                        margin-left:-60px; margin-top:-22px;
+                        img {width:260px}
+                    }
+                }
+            }
+        }
+        #footer {
+            position:fixed; bottom:0; left:0; right:0; padding:40px 0; background:rgba(255, 255, 255, 1); border-top-left-radius:20px; border-top-right-radius:20px;
+            .cert {
+                display:flex; flex-direction: column; align-items: center; flex-wrap: nowrap; justify-content:center; text-align:center;
+                > div {
+                    position:relative;
+                    .tooltip {
+                        /*display:block;*/ position:absolute; left:50%; top:-30px; margin-left:-34px; width:68px; line-height:24px; background-color:#020202; border-radius:6px; font-size:12px; color:#fff;
+                        &::after {content:''; position:absolute; top:23px; left:28px; width:0; height:0; border-left:7px solid transparent; border-right:7px solid transparent; border-top:10px solid #020202}
+                    }
+                    button {
+                        width:285px; height:50px; line-height:53px; border-radius:10px;
+                        span {
+                            font-size:16px;
+                            .ico {
+                                display:inline-block; width:20px; height:20px; background-repeat:no-repeat; background-position:center center; vertical-align:middle; position:relative; top:-2px; margin-right:6px;
+                                &.ico_naver {background-image:url('../images/naver-icon.svg')}
+                                &.ico_kakao {background-image:url('../images/kakao-icon.svg')}
+                                &.ico_arrow {top:0; margin-right:0; background-image:url('../images/ico_arrow.svg')}
+                            }
+                        }
+                    }
+                    &.naver_cert button {background-color:#0AC30A;
+                        span {color:#fff}
+                    }
+                    &.kakao_cert button {background-color:#F7DB0C;
+                        span {color:#191919}
+                    }
+                    &.phone_cert button {
+                        background-color:transparent;
+                        span {font:300 14px 'HGL';}
+                    }
+                }
+            }
+        }
+    }
+
     #header {
-        display:flex; justify-content:space-between; align-items:center; height:62px;
+        display:flex; justify-content:space-between; align-items:center; position:fixed; top:0; height:62px; z-index:99;
         h1,
         > p {width:16px}
         h2 {font:300 18px 'HMR'}
@@ -550,100 +646,6 @@ body {background:var(--background-bg-01, #F9F7F4);}
     }
 }
 
-#wrapper.main_step.comm_wrap {
-    height:100vh; background: var(--warm-gray-scale-ot-02, linear-gradient(0deg, rgba(241, 141, 0, 0.10) 0%, rgba(241, 141, 0, 0.10) 100%), #FFF);
-    #header {
-        position:relative; padding:0; background-color:transparent;
-        h1 {
-            display:inline-block; width:auto;
-            .ico_logo {width:25px; vertical-align:bottom}
-            span {display:inline-block; width:85px; margin-left:4px}
-        }
-    }
-
-    #container {
-        .cotents_wrap {
-            .cotent_heder {
-                h2 {
-                    font:400 16px/24px "HGM"; letter-spacing:-.32px; color:#000;
-                    span {font:500 16px/24px "HGM"; letter-spacing:-.32px;; color:#000;}
-                }
-                .title_disc {margin-top:8px}
-                
-            }
-        }
-    }
-}
-
-#wrapper.main_wrap {
-    display:flex; flex-direction:column; justify-content:space-between; gap:20px 0; height:100vh; background-color:#FFF4E3;
-    &.bg_h {background-image:url('../images/bg_h.svg'); background-repeat:no-repeat; background-size:cover}
-    #header {
-        h1 {
-            display:inline-block; width:auto;
-            .ico_logo {width:25px; vertical-align:bottom}
-            span {display:inline-block; width:85px; margin-left:4px}
-        }
-    }
-
-    #container {
-        .main_intro {
-            display:flex; flex-direction:column; align-items:center; text-align:center; justify-content:center; position:absolute; top:37%; left:50%; width:350px; height:320px; margin-top:-160px; margin-left:-175px;
-            .main_intro_head {
-                h2 {font-family:'HMR'; font-size:30px; line-height:42px}
-                p {
-                    font:500 16px 'HGL'; line-height:24px; padding:0 30px;
-                    span {
-                        position:relative; font-family:'HGM'; font-weight:500;
-                        &::after {content:''; position:absolute; bottom:-3px; left:-1px; right:-1px; height:6px; border-radius:3px; background-color:rgba(241, 141, 0, .25)}
-                    }
-                }
-            }
-            .main_intro_body {
-                .main_chrt {
-                    margin-left:-48px; margin-top:-20px;
-                    img {width:260px}
-                }
-            }
-        }
-    }
-    #footer {
-        position:fixed; bottom:0; left:0; right:0; padding:40px 0; background:rgba(255, 255, 255, 1); border-top-left-radius:20px; border-top-right-radius:20px;
-        .cert {
-            display:flex; flex-direction: column; align-items: center; flex-wrap: nowrap; justify-content:center; text-align:center;
-            > div {
-                position:relative;
-                .tooltip {
-                    /*display:block;*/ position:absolute; left:50%; top:-30px; margin-left:-34px; width:68px; line-height:24px; background-color:#020202; border-radius:6px; font-size:12px; color:#fff;
-                    &::after {content:''; position:absolute; top:23px; left:28px; width:0; height:0; border-left:7px solid transparent; border-right:7px solid transparent; border-top:10px solid #020202}
-                }
-                button {
-                    width:285px; height:50px; line-height:53px; border-radius:10px;
-                    span {
-                        font-size:16px;
-                        .ico {
-                            display:inline-block; width:20px; height:20px; background-repeat:no-repeat; background-position:center center; vertical-align:middle; position:relative; top:-2px; margin-right:6px;
-                            &.ico_naver {background-image:url('../images/naver-icon.svg')}
-                            &.ico_kakao {background-image:url('../images/kakao-icon.svg')}
-                            &.ico_arrow {top:0; margin-right:0; background-image:url('../images/ico_arrow.svg')}
-                        }
-                    }
-                }
-                &.naver_cert button {background-color:#0AC30A;
-                    span {color:#fff}
-                }
-                &.kakao_cert button {background-color:#F7DB0C;
-                    span {color:#191919}
-                }
-                &.phone_cert button {
-                    background-color:transparent;
-                    span {font:300 14px 'HGL';}
-                }
-            }
-        }
-    }
-}
-
 .new_direct .form_wrap {position:relative; display:flex; flex-wrap:wrap; align-items:stretch; width:100%; justify-content:space-between; align-content:center}
 .form_label label, .form_label .form_title {font:400 14px/20px "HML"; display:inline-block; color:#333}
 
@@ -808,7 +810,7 @@ body {background:var(--background-bg-01, #F9F7F4);}
     display:flex; justify-content:center; align-items:center; flex-direction:column; position:fixed; left:0; top:0; width:100%; height:100%; opacity:0; transition:opacity .3s ease; z-index:1002;
     &.is-active {opacity:1}
     .loding_bar {
-        width:110px; margin-top:-40px;
+        width:110px; margin-top:-28px;
         img {border-radius:50%}
     }
     .txt_load {font-size: 16px; position:relative; top:12px; color:#E1D2C2; font-size:16px}
