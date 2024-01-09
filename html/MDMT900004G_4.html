@@ -23,8 +23,8 @@
 
 		<!-- Container -->
 		<section id="container">
-			<div class="cotents_wrap">
-				<div class="cotent_heder">
+			<div class="content_wrap">
+				<div class="content_heder">
 					<div class="step_box">
 						<p>보험료 결제를 위해 정보를 입력해 주세요.</p>
 						<ul>
@@ -37,13 +37,13 @@
 					</div><!-- //계약단계 Step 표시 -->
 					<p class="title_disc">보험료 결제 방법을 <br>선택해 주세요.</p>
 				</div>
-				<div class="cotent_body">
+				<div class="content_body">
 					<div class="pay_wrap">
                         <form>
                             <div class="tab_wrap">
                                 <div class="tab-body">
                                     <!-- s: 제목1 -->
-                                    <div id="tabContent01" class="tab-content" role="tabpanel" aria-labelledby="tabNav01" aria-hidden="true" hidden>
+                                    <div id="tabContent01" class="tab-content" aria-hidden="true">
                                         <div class="form_item">
                                             <div class="form_label">
                                                 <label for="">은행선택</label>
@@ -56,13 +56,13 @@
                                     </div>
                                     <!-- e: 제목1 -->
                                     <!-- s: 제목2 -->
-                                    <div id="tabContent02" class="tab-content is-active" role="tabpanel" aria-labelledby="tabNav02" aria-hidden="true">
+                                    <div id="tabContent02" class="tab-content is-active" aria-hidden="false">
                                         <div class="form_item">
                                             <div class="form_label">
                                                 <label for="">유효기간</label>
                                             </div>
                                             <div class="form_wrap">
-                                                <input type="text" id="" name="" class="form-input" value="" placeholder="YYYYMM" />
+                                                <input type="text" id="" name="" class="form-input" value="" placeholder="YYYY.MM" />
                                                 <button type="reset" class="btn_clear" onclick="clearInput()"><i class="arw arw-close"></i></button>
                                             </div>
                                         </div>
@@ -71,10 +71,10 @@
                                                 <label for="">신용카드번호</label>
                                             </div>
                                             <div class="form_wrap col4">
-                                                <input type="text" id="" name="" class="form-input" value="1234" placeholder="4자리" />
-                                                <input type="password" id="" name="" class="form-input" value="****" placeholder="4자리" />
-                                                <input type="password" id="" name="" class="form-input" value="****" placeholder="4자리" />
-                                                <input type="text" id="" name="" class="form-input" value="567" placeholder="4자리" />
+                                                <input type="text" id="" name="" class="form-input" value="1234" placeholder="4자리" maxlength="4" />
+                                                <input type="password" id="" name="" class="form-input" value="****" placeholder="4자리" maxlength="4" />
+                                                <input type="password" id="" name="" class="form-input" value="****" placeholder="4자리" maxlength="4" />
+                                                <input type="text" id="" name="" class="form-input" value="567" placeholder="4자리" maxlength="4" />
                                             </div>
                                         </div>
                                     </div>
@@ -86,11 +86,11 @@
                                         <label for="">보험료 결제 방법</label>
                                     </div>
                                     <ul role="tablist">
-                                        <li role="none">
-                                            <a href="#tabContent01" id="tabNav01" role="tab" aria-controls="tabContent01" aria-selected="false"><span>실시간 계좌이체</span></a>
+                                        <li role="presentation">
+                                            <a href="#tabContent01" role="tab" aria-controls="tabContent01" aria-selected="true" aria-expanded="true"><span>실시간 계좌이체</span></a>
                                         </li>
-                                        <li role="none" class="is-selected">
-                                            <a href="#tabContent02" id="tabNav02" role="tab" aria-controls="tabContent02" aria-selected="false"><span>신용카드</span></a>
+                                        <li role="presentation" class="is-active">
+                                            <a href="#tabContent02" role="tab" aria-controls="tabContent02" aria-selected="false" aria-expanded="false"><span>신용카드</span></a>
                                         </li>
                                     </ul>
                                 </div>

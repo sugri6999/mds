@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
+<meta name="format-detection" content="telephone=no" />
+<title>현대해상</title>
+<link type="text/css" rel="stylesheet" href="../css/import.css" />
+<link type="text/css" rel="stylesheet" href="../css/style.css" />
+<script src="../js/import.js"></script>
+</head>
+<body>
+	<div id="wrapper" class="comm_wrap main_step">
+		<!-- HEADER -->
+        <header id="header">
+			<!-- <h1><object data="../images/g62.svg"></object></h1> -->
+			<h1><img src="../images/g62.svg" class="ico_logo" alt="H" /> <span><img src="../images/text_logo.svg" class="txt_logo" alt="현대해상" /></span></h1>
+		</header>
+        <!-- //HEADER -->
+
+		<!-- Container -->
+		<section id="container">
+            <div class="content_wrap">
+				<div class="content_heder">
+					<p class="title_disc">안녕하세요 <br>가입증서 및 영수증 조회를 위해 <br>생년월일 8자리를 알려주세요.</p>
+					<div class="info_wrap">
+						<div class="info_title">계약정보</div>
+						<div class="info_box">
+							<p>퇴직연금 가입증서/영수증</p>
+						</div>
+					</div>
+				</div>
+				<div class="content_body">
+					<div class="pay_wrap">
+                        <div class="form_item">
+                            <div class="form_label">
+                                <label for="dateControll">생년월일</label>
+                            </div>
+                            <div class="form_wrap is-focused">
+                                <form>
+                                    <input type="text" id="dateControll" name="dateControll" class="form-input" onkeyup="this.value = date_mask(this.value)" maxlength="10" placeholder="예. 1999.11.11" />
+                                    <button type="reset" class="btn_clear" onclick="clearInput()"><i class="arw arw-close"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+		</section>
+		<!-- //Container -->
+
+        <!-- Footer -->
+        <!-- <footer id="footer">
+            <button type="button" class="btn btn-type1 btn-primary btn-block"><span>다음</span></button>
+        </footer> -->
+        <!-- //Footer -->
+	</div>
+</body>
+</html>

@@ -18,17 +18,17 @@
 
 /*========================================== FONT ==========================================*/
 @font-face {
+	font-family:"HGL";
+	font-style:normal;
+	src:url("../font/HIGothicL.ttf");
+	src:local("※"), url("../font/HIGothicL.ttf") format("woff"), url("../font/HIGothicL.woff2") format("woff"), url("../font/HIGothicL.woff") format("woff")
+}
+@font-face {
 	font-family:"HGM";
 	font-weight:300;
 	font-style:normal;
 	src:url("../font/HIGothicM.ttf");
 	src:local("※"), url("../font/HIGothicM.ttf") format("woff"), url("../font/HIGothicM.woff2") format("woff"), url("../font/HIGothicM.woff") format("woff")
-}
-@font-face {
-	font-family:"HGL";
-	font-style:normal;
-	src:url("../font/HIGothicL.ttf");
-	src:local("※"), url("../font/HIGothicL.ttf") format("woff"), url("../font/HIGothicL.woff2") format("woff"), url("../font/HIGothicL.woff") format("woff")
 }
 @font-face {
 	font-family:"HGB";

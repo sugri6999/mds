@@ -181,21 +181,24 @@ var ui = {
 		참고경로: modules/modules_tab.html
 		참고메뉴: 대메뉴 > 중메뉴 > 소메뉴 > 화면명
 	*/
-	tab: {
-		eleButton: '.tab-nav a',
-		eleContent: '.tab-content',
-		init: function(){
-			this.event();
-		},
-		event: function(){
+	tab : {
+		eleButton : '.tab-nav a',
+		eleContent : '.tab-content',
+		clsActive : 'is-active',
+		init : function(){
 			var _this = this;
-			$(this.eleButton).not('.is-clicked').on('click', function(){
-				_this.action($(this).attr('aria-controls')); return false;
-			}).attr('.is-clicked');
+			$(this.eleContent+'.'+this.clsActive).each(function(){_this.action('#'+$(this).attr('id'))});
+			this.event($(this.eleButton));
 		},
-		action: function(id){
-			$(this.eleButton+'[href="#'+id+'"]').attr({'aria-selected':'true'}).parent().addClass('is-selected').siblings().removeClass('is-selected').children().attr({'aria-selected':'false'});
-			$('#'+id).attr({'aria-hidden':'false'}).removeAttr('hidden').siblings().attr({'aria-hidden': 'true'}).attr('hidden', 'hidden');
+		event : function($this){
+			var _this = this;
+			$this.not('.is-evented').on('click', function(){
+				_this.action($(this).attr('href')); return false;
+			}).attr('.is-evented');
+		},
+		action : function(id){
+			$(this.eleButton+'[href="'+id+'"]').attr({'aria-selected':'true'}).removeAttr('aria-expanded').parent().addClass(this.clsActive).siblings().removeClass(this.clsActive).children().attr({'aria-selected':'false', 'aria-expanded':'false'});
+			$(id).addClass(this.clsActive).attr('aria-hidden', 'false').siblings().removeClass(this.clsActive).attr('aria-hidden', 'true');
 		},
 	},
 	
@@ -795,6 +798,22 @@ $(document).ready(function(){
 	$(".radio-wrap").click(function(){
 		$(this).removeClass("bordered");
 	})
+
+	// 박스라인 활성화
+	$(".over_event .card").click(function(){
+		$(this).toggleClass("is-active");
+		$(this).siblings().removeClass("is-active");
+	})
+
+	// 전체동의 체크박스 박스라인
+	$(".box_check input:checkbox").on('click', function() {
+		if ( $(this).prop('checked') ) {
+			$(this).parent().addClass("selected");
+		} else {
+			$(this).parent().removeClass("selected");
+		}
+	});
+
 
 
 });

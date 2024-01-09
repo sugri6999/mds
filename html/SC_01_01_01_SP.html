@@ -27,25 +27,28 @@
 
 		<!-- Container -->
 		<section id="container">
-			<div class="cotents_wrap">
-				<div class="cotent_heder">
+			<div class="content_wrap">
+				<div class="content_heder">
 					<div class="step_box">
 						<p>네이버 인증을 진행해주세요.</p>
 					</div><!-- //계약단계 Step 표시 -->
 					<p class="title_disc"><span class="underline_hl">휴대전화번호</span>를 <br>알려주세요.</p>
 				</div>
-				<div class="cotent_body">
+				<div class="content_body">
 					<div class="pay_wrap">
-                        <div class="form_item col2">
+                        <div class="form_item is-focused">
                             <div class="form_label">
                                 <label for="">휴대전화번호</label>
                             </div>
-                            <div class="form_wrap is-focused">
-                                <div class="num_select">                                
-                                    <span class="text_label"><input type="text" id="" name="" class="form-input" value="010" disabled /></span> 
+                            <div class="col2">
+                                <div class="form_wrap tel">
+                                    <input type="text" id="" name="" class="form-input" value="010" disabled />
                                     <button type="button" class="btn_select" onclick="ui.popup.open('daySelect', this);"><i class="arw arw-toggle"></i></button>
                                 </div>
-                                <span class="type_t"><input type="text" id="" name="" oninput="autoHyphen(this)" maxlength="9" class="form-input" placeholder="휴대전화번호 입력" /></span>
+                                <div class="form_wrap">
+                                    <input type="text" id="" name="" class="form-input" oninput="autoHyphen(this)" maxlength="9" value="1234-5678" placeholder="휴대전화번호 입력" />
+                                    <button type="reset" class="btn_clear"><i class="arw arw-close"></i></button>
+                                </div>
                             </div>
                         </div>
                         <div class="form_item">

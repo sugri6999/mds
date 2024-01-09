@@ -30,7 +30,7 @@
 /* Display */
 .position-r {position:relative;}
 .display-i {display:inline-block}
-.display-b {display:block}
+.display-b {display:block !important}
 .display-n {display:none}
 .display-t {display:table; width:100%}
 .display-tc {display:table-cell}
@@ -88,7 +88,7 @@ hr {width:100%; height:1px; margin:6px 0; background-color:#EDEDED; border:0}
 	Grid Layout
 -------------------------------------------------------------------*/
 /* title */
-
+.font_hgm {font-family:'HGM' !important}
 
 /* Margin */
 .margin-t1 {margin-top:1px}

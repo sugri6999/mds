@@ -195,6 +195,7 @@ var dimmer = {
     close: function($module, selector, callback){
         var _this = this;
         _this.lens = this.lens - 1;
+		$(_this.eleModule).removeClass('is-active'); // 모달 선호출 상태에서 딤제거
         //활성화된 딤이 없는경우 실행
         if (_this.lens == 0){
             setScroll.enable(); //스크롤활성화
@@ -204,3 +205,30 @@ var dimmer = {
         }
     }
 }
+
+// var dimmer = {
+//     eleModule : '.dimmer',
+//     lens      : 0,
+//     open: function($module, selector, callback){
+//         var _this = this;
+//         _this.lens = _this.lens + 1;
+//         //딤이 없는경우 생성
+//         if ($(_this.eleModule).length == 0){ $('.popup-wrap').append('<div class="dimmer" aria-hidden="true"></div>') };
+//         setTimeout(function(){ $(_this.eleModule).addClass(_this.selector).addClass('is-active'); }); //딤활성화
+//         setScroll.disable(); //스크롤비활성
+//         setFocus.disable($module); //초점비활성
+//         if (callback){callback} //콜백이 있는경우 실행
+//     },
+//     close: function($module, selector, callback){
+//         var _this = this;
+//         _this.lens = this.lens - 1;
+// 		$(_this.eleModule).removeClass('is-active'); // 모달 선호출 상태에서 딤제거
+//         //활성화된 딤이 없는경우 실행
+//         if (_this.lens == 0){
+//             setScroll.enable(); //스크롤활성화
+//             setFocus.enable($module); //초점활성화
+//             $(_this.eleModule).removeClass('is-active'); //딤제거
+//             if (callback){callback} //콜백이 있는경우 실행
+//         }
+//     }
+// }
